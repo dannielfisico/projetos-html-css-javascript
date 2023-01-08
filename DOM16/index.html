@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Verificador de idade 3.0</title>
+</head>
+<body>
+    <header>
+        <h1>Verificador de idade 3.0</h1>
+
+        <pre><code><p>Neste exercício, foi desenvolvido um verificador de idade,
+onde o usuário informa o ano de nascimento e o gênero e automaticamente 
+a aplicação analiza dos dados e retorna algumas informações. Faça seus testes!!!</p></code><a href="../index.html"><button>Menu</button></a></pre>
+
+
+    </header>
+
+    <section>
+        <div>
+            <p>Ano de Nascimento: 
+                <input type="number" name="anoForm" id="anoForm" min="1900" onclick="verificar()" onkeyup="verificar()">
+            </p>
+            <p>Gênero: 
+                <input oninput="verificar()" type="radio" name="generoForm" id="masc" checked>Masculino | 
+                <input oninput="verificar()" type="radio" name="generoForm" id="fem">Feminino
+            </p>
+            <!-- <input id="btn" type="button" value="Verificar" onclick="verificar()" > -->
+        <hr>
+            </div>
+            <div id="msg">
+                
+            </div>
+        <hr>
+        <div>
+            <div class="barra">
+                <div><p id="percent"></p></div>
+            </div>
+            <img id="foto" src="../DOM09/assets/secreto.jpg" alt="pessoa">
+        </div>
+
+    </section>
+    
+    <footer>
+        <p>&copy; dannielfisico</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

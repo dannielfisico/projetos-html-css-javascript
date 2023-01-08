@@ -1,0 +1,21 @@
+body {
+    background: rgb(68, 125, 199);
+    color: white;
+    font: normal 18pt Arial;
+}
+
+input {
+    width: 80px;
+    line-height: 12px;
+}
+
+div#resultado {
+    border-radius: 15px;
+    background-color: #000;
+    line-height: 25px;
+    margin-top: 10px;
+    text-align: right;
+    width: 170px;
+    color: rgb(194, 194, 194);
+    padding: 5px;
+}

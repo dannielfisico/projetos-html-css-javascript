@@ -1,0 +1,46 @@
+div#principal {
+    width: 800px;
+    /* height: 270px; */
+    border-style: dotted;
+    background-color: bisque;
+    margin: auto;
+}
+
+div#interna {
+    width: 700px;
+    height: 150px;
+    border-style: groove;
+    background-color: rgb(166, 206, 179);
+    margin: auto;
+}
+
+body {
+    text-align: center;
+}
+
+input#btn {
+    margin-top: 6px;
+}
+
+div#album {
+    margin-top: 15px;
+    padding: 10px;
+    /* border-style: solid; */
+    width: 200px;
+    /* height: 200px; */
+}
+
+img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+div#emrelacao {
+    border-style: solid;
+    border-color: white;
+    background-color: bisque;
+    width: 300px;
+    margin: auto;
+    margin-top: 18px;
+    padding: 5px;
+}

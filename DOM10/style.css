@@ -1,0 +1,202 @@
+/* Estilos gerais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+  }
+  
+  /* Cabeçalho */
+  header {
+    background-color: #333;
+    color: white;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+  
+  /* Navegação */
+  nav {
+    background-color: rgb(121, 34, 34);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+  }
+  
+  nav a {
+    color: white;
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    background-color: #555;
+    }
+    
+    /* Conteúdo principal */
+    main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    }
+    
+    /* Seção de pacotes */
+    section#pacotes {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+    }
+    
+    section#pacotes h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    }
+    
+    section#pacotes h3 {
+    font-size: 1.2em;
+    margin: 20px 0 10px 0;
+    }
+    
+    section#pacotes a {
+    background-color: #333;
+    border-radius: 5px;
+    color: white;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    }
+    
+    section#pacotes a:hover {
+    background-color: #555;
+    }
+    
+    /* Seção de como funciona */
+    section#como-funciona {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+    }
+    
+    section#como-funciona h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    }
+    
+    section#como-funciona ol {
+    list-style: decimal;
+    margin-left: 20px;
+    padding-left: 20px;
+    }
+    
+    /* Seção de depoimentos */
+    section#depoimentos {
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        padding: 20px;
+        width: 30%;
+        text-align: center;
+        margin-bottom: 20px;
+        }
+        
+        section#depoimentos h2 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        }
+        
+        section#depoimentos blockquote {
+        border-left: 5px solid #333;
+        margin: 20px 0;
+        padding-left: 20px;
+        }
+        
+        section#depoimentos blockquote p {
+        font-size: 0.9em;
+        margin: 0;
+        }
+        
+        section#depoimentos blockquote cite {
+        display: block;
+        font-size: 0.8em;
+        margin-top: 10px;
+        text-align: right;
+        }
+        
+        /* Seção de contato */
+        section#contato {
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        padding: 20px;
+        width: 30%;
+        text-align: center;
+        margin-bottom: 20px;
+        }
+        
+        section#contato h2 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        }
+        
+        section#contato form label {
+        display: block;
+        margin-bottom: 5px;
+        }
+        
+        section#contato form input[type="text"],
+        section#contato form input[type="email"],
+        section#contato form textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        resize: vertical;
+        }
+        
+        section#contato form input[type="submit"] {
+        background-color: #333;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+        
+        section#contato form input[type="submit"]:hover {
+        background-color: #555;
+        }
+        
+        /* Rodapé */
+        footer {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        }
+  

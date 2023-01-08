@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tabuada Exercício</title>
+</head>
+<body>
+    <header>
+        <h1>Gerar Tabuada 2.0</h1>
+
+        <pre><code><p>Neste exercício, ao clicar no botão Gerar Tabuada, o imput
+            foi colocado numa janela prompt e ao informar um número 
+            duas tabuadas são criadas e inseridas dentro de um select. Faça seus testes!!
+        *sem regras de validação, ou seja pode inserir qualquer número.
+        </p></code><a href="../index.html"><button>Menu</button></a></pre>
+
+    </header>
+
+    <section>
+        <div>
+            <!-- <p>Número:  -->
+            <!-- <input type="number" name="num" id="num"> -->
+            <input type="button" value="Gerar Tabuada em Select" onclick="gerarTabuada()">
+            <input type="button" value="Gerar Tabuada em Lista" onclick="gerarTabuada2()">
+            </p>
+        </div>
+        <div>
+            <select name="tabuada" id="tabuada" size="10">
+                <option>  Aqui é o Select   </option>
+                <option>  onde aparecerá   </option>
+                <option>  resultado   </option>
+
+            </select>
+        </div>
+        <div>
+            <ul id="minhaLista"></ul>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; dannielfisico</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <title>Verifificador de idade 1.1</title>
+</head>
+<body>
+    <header>
+        <h1>Verifificador de idade 2.0</h1>
+
+
+        <pre><code><p>Neste exercício, ao clicar no botão Verificar, 
+a aplicação irá analizar as informações inseridas e setar 
+uma foto adequada à faixa de idade e mostrar um frase
+ de status logo abaixo. Faça seus testes!!
+*Algumas regras de validação forma implementadas.</p></code><a href="../index.html"><button>Menu</button></a></pre>
+
+    </header>
+
+    <section>
+        <div>
+            <p>Informe o ano de nascimento: <input type="number" name="anoNascimento" id="anoNascimento"></p>
+
+            <p>Qual o gênero da pessoa: 
+                <input type="radio" name="gen" id="radgen" checked>Masc
+                <input type="radio" name="gen" id="radgen">Fem
+            </p>
+            <p>
+                <input type="button" value="Verifificar" onclick="verificar()">
+            </p>
+            
+        </div>
+        <div id="res">
+            
+            <p><img id="foto" src="../DOM09/assets/secreto.jpg" alt="Pessoa"></p>
+            
+        </div>
+        <p id="info"></p>
+
+    </section>
+
+    <footer>
+        <p>&copy; dannielfisico</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

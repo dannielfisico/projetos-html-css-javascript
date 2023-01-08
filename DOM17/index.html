@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Barra de Progresso</title>
+</head>
+<body>
+    <header>
+        <h1>Barra de progresso 2.0</h1>
+        
+        <pre><code><p>Neste exercício, houve a criação de
+            uma barra de progresso que muda dinamicamente e mostra a porcentagem sobre a barra.
+            *sem regras de validação para valores maiores que 100.</p></code><a href="../index.html"><button>Menu</button></a></pre>
+
+    </header>
+
+    <section>
+        <div class="barra">
+            <div><p id="percent"></p></div>
+        </div>
+        
+        Denina a <input type="number" name="prog" id="prog" min="0" max="100" onclick="alterarProgresso()" onkeyup="alterarProgresso()">% do progresso.
+        
+
+    </section>
+
+    <footer>
+        <p>&copy; dannielfisico</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
