@@ -24,14 +24,16 @@ input#btn {
 
 div#album {
     margin-top: 15px;
+    margin: auto;
     padding: 10px;
     /* border-style: solid; */
-    width: 200px;
+    width: 1000px;
     /* height: 200px; */
 }
 
 img {
-    width: 100%;
+    width: 200px;
+    height: 180px;
     border-radius: 15px;
 }
 
@@ -43,4 +45,13 @@ div#emrelacao {
     margin: auto;
     margin-top: 18px;
     padding: 5px;
+}
+
+section {
+
+    display: inline-block;
+    /* border: dotted; */
+    /* border-color: blue; */
+    margin: 5px;
+    width: 250px;
 }
