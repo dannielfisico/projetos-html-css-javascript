@@ -25,7 +25,7 @@ function postar() {
             suaRelacao =  'Nunca irei.'
         } 
 
-    foto.setAttribute('src', url)
+    foto.setAttribute('src', url.value)
     txtnome.innerHTML = nomePontoTuristico.value
     txtdescricao.innerHTML = descricao.value
     txtRelacao.innerHTML = suaRelacao
