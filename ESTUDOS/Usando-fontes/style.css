@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker');
+@font-face {
+    font-family: 'Say';
+    src: url('./fontes/Satisfy-Regular.ttf');
+}
+
+h1 {
+    font-family: 'Crimson Pro', serif;
+    font-size: 48px;
+}
+
+body {
+    font-family: 'Crimson Pro', serif;
+    font-size: 10px;
+}
+
+p {
+    font-family: 'Pacifico', serif;
+    font-size: 24px;
+    text-indent: 35px;
+}
+
+p#dois {
+    font-family: 'Say';
+    font-size: 24px;
+}
