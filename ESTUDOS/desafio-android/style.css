@@ -1,0 +1,182 @@
+@charset 'utf-8';
+@font-face {
+    font-family: 'idroid' ;
+    src: url('./fontes/idroid.otf');
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #84E1AD;
+}
+
+header {
+    background-image: linear-gradient(0deg, #1A5C38, #35BF73);
+    margin: 0px;
+    box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.555);
+}
+
+li {
+    display: inline-block;
+    color: #fff;
+    padding: 14px;
+    margin-right: 10px;
+}
+
+li:hover {
+    background-color: rgba(255, 255, 255, 0.541);
+    color: #1A5C38;
+    transition: 900ms;
+}
+
+h1 {
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase ;
+}
+
+main {
+    background-color: #fff;
+    width: 900px;
+    margin: auto;
+    margin-top: 4px;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.068);
+}
+
+h1#principal {
+    font-family: 'idroid';
+    color: #1A5C38;
+
+}
+
+p {
+    text-indent: 40px;
+    text-align: justify;
+    margin: 20px 0px;
+}
+
+h2 {
+    font-family: 'idroid';
+    color: #1A5C38;
+    background-color: #35bf737a;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-indent: 12px;
+}
+
+h5 {
+    text-align: center;
+    color: #fff;
+    
+}
+
+.ilustracao {
+    text-align: center;
+    margin: 25px 0px;
+}
+
+img {
+    width: 100%;
+}
+
+img#bugdroid {
+    width: 60%;
+}
+
+a {
+    text-decoration: none;
+    color: #35BF73;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #1A5C38;
+}
+
+a:visited {
+    color: black;
+}
+
+a::after {
+    content: ' 🔗';
+}
+
+.video {
+    background-color: #1A5C38;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.banner {
+    margin: 15px;
+    background-color: #43b67785;
+    border-radius: 10px;
+
+}
+
+h3 {
+    background-color: #1A5C38;
+    color: #fff;
+    text-indent: 12px;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+article {
+    padding: 10px;
+}
+
+.versoes {
+    padding: 0;
+    color: #000;
+    display: block;
+}
+
+.versoes:hover{
+    background-color: transparent;
+    color: #000;
+}
+
+.versoes::before {
+    content: '✔ ';
+}
+
+div#lista1 {
+    
+    width: 260px;
+    display: inline-block;
+    text-align: left;
+    padding: 10px;
+    margin-right: 80px;
+       
+}
+
+div#lista2 {
+    
+    width: 210px;
+    display: inline-block;
+    padding: 0px;
+    margin: 10px; 
+    margin: 0;
+}
+
+footer {
+    background-color: #1A5C38;
+    padding: 1px;
+}
+
+.rodape {
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    
+}
