@@ -3,7 +3,7 @@ const a = 2
 console.log(array)
 array.push(a)  /*Variável 'a' adicionada no final do array */ 
 console.log(array)
-const b = 5
+const b = 15
 array.push(b) /*Variável 'b' adicionada no final do array */ 
 console.log(array)
 const c = 3
@@ -13,7 +13,7 @@ array.push(d) /*Variável 'd' adicionada no final do array */
 const e = 0
 array.push(e) /*Variável 'e' adicionada no final do array */ 
 console.log(array) /*Impressão do array na mesma ordem em que os elementos foram adicionados */ 
-const arrayCres  = array.sort() /* O método .sort() faz com que os elementos do array sejam classificados em ordem crescente (ordem alfabética em caso de string) */
+const arrayCres  = array.sort((a,b) => a - b) /* O método .sort() faz com que os elementos do array sejam classificados em ordem crescente (ordem alfabética) */
 console.log(arrayCres) /* Impressão do arrayCres que é o array normal em ordem crescente, ou seja os elementos são colocados do menor para o maior*/
 const menor = arrayCres[0] /*Menor valor contido no arrayCres*/
 const maior = arrayCres[arrayCres.length - 1] /*Maior valor contido no arrayCres*/
