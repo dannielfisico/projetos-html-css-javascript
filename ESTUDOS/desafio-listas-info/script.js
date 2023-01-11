@@ -1,7 +1,10 @@
 const listaAdd = [] //um array vazio para armazenar os  números
+let viuResultado = false
+const botoesOcultos = document.getElementsByClassName('oculto')
 function add(){
-    const btnLimpar = document.querySelector('input#btnLimpar')
-    btnLimpar.setAttribute('style','display: inline-block')
+    botoesOcultos[0].setAttribute('style','display: inline-block')
+    
+    
     const numForm = document.querySelector('input#num') /*Captura e armazena nessa variável o input com id num*/
     if (numForm.value == ""){
         alert(`Digite valores antes de adicionar!`)
@@ -12,15 +15,14 @@ function add(){
         numForm.setAttribute('placeholder',"Digite outro número")
         numForm.focus()
     }
-    
-    
-
-
-
-
+ 
 }
 
 function verResultado(){
+    viuResultado = true
+    if (viuResultado){
+        botoesOcultos[1].setAttribute('style','display: inline-block')
+    }
     if (listaAdd.length == 0) {
         alert('Adicione valores')
     } else {
