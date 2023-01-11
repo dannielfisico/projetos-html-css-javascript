@@ -1,4 +1,4 @@
-const listaAdd = [] //um array vazio para armazenar os  números
+let listaAdd = [] //um array vazio para armazenar os  números (Atenção: Defini essa variavel com let para que ela seja sobrescria lá na função limparDados)
 let viuResultado = false
 const botoesOcultos = document.getElementsByClassName('oculto')
 function add(){
@@ -57,12 +57,12 @@ function limparConsole(){
 }
 
 function limparDados(){
-    // listaAdd = []
+    listaAdd = []
     const respHTML = document.querySelector('ul.resposta')
     respHTML.innerHTML = ""
     botoesOcultos[0].setAttribute('style','display: none')
     botoesOcultos[1].setAttribute('style','display: none')
     botoesOcultos[2].setAttribute('style','display: none')
-    alert('Quase tudo limpinho, risos, menos os dados do array :(')
+    alert('Ai sím hein! Apagou foi tudo.')
 
 }
