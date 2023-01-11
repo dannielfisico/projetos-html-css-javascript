@@ -13,10 +13,24 @@ function add(){
         listaAdd.push(numForm.value)
         const listaAddCrescente = listaAdd.sort((a,b) => a - b)
         numForm.value = ""
-        numForm.setAttribute('placeholder',"Digite outro número")
+        numForm.setAttribute('placeholder',"Digite outra nota")
         numForm.focus()
+        const soma = somar()
+        // const mostrarResultado = somar()
+
+            //inicio da soma dos valores contidos no array
+            const example = listaAdd
+            function somar() {
+                var somatorio = 0
+                for (let cont = 0; cont < example.length; cont++){
+                    somatorio += example[cont]
+                }
+                return somatorio
+            }
+            const mostrarResultado = somar()
+            console.log(mostrarResultado)
+            // fim do somatório      
     }
- 
 }
 
 function verResultado(){
@@ -34,7 +48,7 @@ function verResultado(){
     const valoresCrescente = document.createElement('li')
     respHTML.appendChild(valoresCrescente)
     valoresCrescente.textContent = `Os valores digitados são: [${listaAdd}]`
-
+    
     const MenorValor = document.createElement('li')
     respHTML.appendChild(MenorValor)
     MenorValor.textContent = `O menor valor é ${listaAdd[0]}.`
@@ -42,10 +56,10 @@ function verResultado(){
     const MaiorValor = document.createElement('li')
     respHTML.appendChild(MaiorValor)
     MaiorValor.textContent = `O maior valor é ${listaAdd[listaAdd.length -1]}.`
-
+    
     const SomaValores = document.createElement('li')
     respHTML.appendChild(SomaValores)
-    SomaValores.textContent = `A soma dos valores é: a calcular...`
+    SomaValores.textContent = `A soma dos valores é: a calcular... `
 
     const MediaValores = document.createElement('li')
     respHTML.appendChild(MediaValores)
@@ -71,17 +85,14 @@ function limparDados(){
         botoesOcultos[0].setAttribute('style','display: none')
         botoesOcultos[1].setAttribute('style','display: none')
         botoesOcultos[2].setAttribute('style','display: none')
-        alert('Ai sím hein! Apagou foi tudo.')
+        alert('Ai sím hein! Apagou foi tudo. ')
 
     } else {
         alert('Os dados não foram apagados!')
     }
-
-
 }
 
-
-//
+//Com essa função o usuário é questionado duas vezes antes de os dados serem apagados
 function limparDadosAlternativa(){
     const anoAtual = new Date().getFullYear()
     const pergunta1 = "Para limpar os dados informe em que ano você nasceu."
@@ -101,6 +112,22 @@ function limparDadosAlternativa(){
     } else {
         alert('Os dados não foram apagados!')
     }
-
-
+    
 }
+
+/*inicio da soma dos valores contidos no array
+const example = [1,2,3]
+
+function somar() {
+    var somatorio = 0
+    for (let cont = 0; cont < example.length; cont++){
+        somatorio += example[cont]
+    }
+    return somatorio
+}
+
+
+const mostrarResultado = somar()
+console.log(mostrarResultado)
+*/
+
