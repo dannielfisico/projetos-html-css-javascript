@@ -43,6 +43,10 @@ function verResultado(){
     respHTML.appendChild(MaiorValor)
     MaiorValor.textContent = `O maior valor é ${listaAdd[listaAdd.length -1]}.`
 
+    const SomaValores = document.createElement('li')
+    respHTML.appendChild(SomaValores)
+    SomaValores.textContent = `A soma dos valores é: a calcular...`
+
     const MediaValores = document.createElement('li')
     respHTML.appendChild(MediaValores)
     MediaValores.textContent = `A média entre eles é:   a calcular...`
@@ -57,12 +61,20 @@ function limparConsole(){
 }
 
 function limparDados(){
-    listaAdd = []
-    const respHTML = document.querySelector('ul.resposta')
-    respHTML.innerHTML = ""
-    botoesOcultos[0].setAttribute('style','display: none')
-    botoesOcultos[1].setAttribute('style','display: none')
-    botoesOcultos[2].setAttribute('style','display: none')
-    alert('Ai sím hein! Apagou foi tudo.')
+    const charada = prompt('Para limpar os dados responda em que ano estamos.')
+    const anoAtual = new Date().getFullYear()
+    if(charada == anoAtual){
+        listaAdd = []
+        const respHTML = document.querySelector('ul.resposta')
+        respHTML.innerHTML = ""
+        botoesOcultos[0].setAttribute('style','display: none')
+        botoesOcultos[1].setAttribute('style','display: none')
+        botoesOcultos[2].setAttribute('style','display: none')
+        alert('Ai sím hein! Apagou foi tudo.')
+
+    } else {
+        alert('Os dados não foram apagados!')
+    }
+
 
 }
