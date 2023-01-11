@@ -30,3 +30,5 @@ for (let contador = 0; contador < arrayCres.length; contador++){
     soma += arrayCres[contador]
 } /* O contador definido como 0 e enquanto o contador for menor que o tamanho do arrayCres, será incrementado 1 em cada interação e a soma recebe ela mesma + o valor contido em cada um dos elementos contidos no arrayCres em cada uma das interações.*/
 console.log(`A soma dos termos é ${soma}.`) 
+const mediaArrayCres = soma/arrayCres.length
+console.log(`A média ${mediaArrayCres}.`)
