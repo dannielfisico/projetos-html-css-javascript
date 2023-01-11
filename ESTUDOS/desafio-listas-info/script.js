@@ -60,10 +60,36 @@ function limparConsole(){
     respHTML.innerHTML = ""
 }
 
+//pega o ano do sistema e compara com a resposta que o usuário fornece
 function limparDados(){
     const charada = prompt('Para limpar os dados responda em que ano estamos.')
     const anoAtual = new Date().getFullYear()
     if(charada == anoAtual){
+        listaAdd = []
+        const respHTML = document.querySelector('ul.resposta')
+        respHTML.innerHTML = ""
+        botoesOcultos[0].setAttribute('style','display: none')
+        botoesOcultos[1].setAttribute('style','display: none')
+        botoesOcultos[2].setAttribute('style','display: none')
+        alert('Ai sím hein! Apagou foi tudo.')
+
+    } else {
+        alert('Os dados não foram apagados!')
+    }
+
+
+}
+
+
+//
+function limparDadosAlternativa(){
+    const anoAtual = new Date().getFullYear()
+    const pergunta1 = "Para limpar os dados informe em que ano você nasceu."
+    const pergunta2 = `Quantos anos você completará agora em ${anoAtual}?`
+    const anoNascimento = prompt(pergunta1)
+    const idadePrompt = prompt(pergunta2)
+    const idadeVerdadeira = anoAtual-anoNascimento 
+    if(idadeVerdadeira == idadePrompt){
         listaAdd = []
         const respHTML = document.querySelector('ul.resposta')
         respHTML.innerHTML = ""
