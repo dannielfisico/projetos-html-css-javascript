@@ -46,9 +46,13 @@ main {
     margin: auto;
     margin-top: 4px;
     margin-bottom: 15px;
-    padding: 20px;
+    /* padding: 20px; */
     border-radius: 0px 0px 10px 10px;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.068);
+}
+
+.container {
+    padding: 20px;
 }
 
 h1#principal {
@@ -60,7 +64,7 @@ h1#principal {
 p {
     text-indent: 40px;
     text-align: justify;
-    margin: 20px 0px;
+    margin: 0px 0px 5px 0px;
 }
 
 h2 {
@@ -114,6 +118,7 @@ a::after {
     text-align: center;
     padding: 20px;
     margin-bottom: 20px;
+    
 }
 
 .banner {
