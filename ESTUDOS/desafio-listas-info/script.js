@@ -1,5 +1,6 @@
 const listaAdd = [] //um array vazio para armazenar os  números
 function add(){
+    
     const numForm = document.querySelector('input#num') /*Captura e armazena nessa variável o input com id num*/
     listaAdd.push(numForm.value)
     const listaAddCrescente = listaAdd.sort((a,b) => a - b)
@@ -18,7 +19,7 @@ function verResultado(){
     if (listaAdd.length == 0) {
         alert('Adicione valores')
     } else {
-        const respHTML = document.querySelector('ul.resposta')
+    const respHTML = document.querySelector('ul.resposta')
     respHTML.innerHTML = ""
 
     const valoresCrescente = document.createElement('li')
@@ -37,12 +38,11 @@ function verResultado(){
     respHTML.appendChild(MediaValores)
     MediaValores.textContent = `A média entre eles é:   a calcular...`
     }
-
-    
-    
-    
-
     
     
 }
 
+function limpar(){
+    const respHTML = document.querySelector('ul.resposta')
+    respHTML.innerHTML = ""
+}
