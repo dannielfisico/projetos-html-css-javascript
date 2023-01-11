@@ -1,12 +1,17 @@
 const listaAdd = [] //um array vazio para armazenar os  números
 function add(){
-    
+    const btnLimpar = document.querySelector('input#btnLimpar')
+    btnLimpar.setAttribute('style','display: inline-block')
     const numForm = document.querySelector('input#num') /*Captura e armazena nessa variável o input com id num*/
-    listaAdd.push(numForm.value)
-    const listaAddCrescente = listaAdd.sort((a,b) => a - b)
-    numForm.value = ""
-    numForm.setAttribute('placeholder',"Digite outro número")
-    
+    if (numForm.value == ""){
+        alert(`Digite valores antes de adicionar!`)
+    } else {
+        listaAdd.push(numForm.value)
+        const listaAddCrescente = listaAdd.sort((a,b) => a - b)
+        numForm.value = ""
+        numForm.setAttribute('placeholder',"Digite outro número")
+        numForm.focus()
+    }
     
     
 
