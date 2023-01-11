@@ -2,13 +2,13 @@ const listaAdd = [] //um array vazio para armazenar os  números
 let viuResultado = false
 const botoesOcultos = document.getElementsByClassName('oculto')
 function add(){
-    botoesOcultos[0].setAttribute('style','display: inline-block')
     
     
     const numForm = document.querySelector('input#num') /*Captura e armazena nessa variável o input com id num*/
     if (numForm.value == ""){
         alert(`Digite valores antes de adicionar!`)
     } else {
+        botoesOcultos[0].setAttribute('style','display: inline-block')
         listaAdd.push(numForm.value)
         const listaAddCrescente = listaAdd.sort((a,b) => a - b)
         numForm.value = ""
