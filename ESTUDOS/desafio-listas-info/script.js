@@ -76,6 +76,7 @@ function verResultado(){
 function limparConsole(){
     const respHTML = document.querySelector('ul.resposta')
     respHTML.innerHTML = ""
+    botoesOcultos[1].setAttribute('style','display: none')
 }
 
 //pega o ano do sistema e compara com a resposta que o usuário fornece
