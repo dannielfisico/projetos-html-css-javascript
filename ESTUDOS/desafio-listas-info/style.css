@@ -3,3 +3,11 @@
 .oculto {
     display: none;
 }
+
+li{
+    list-style-type: none;
+}
+
+li::before {
+    content: '😉 ';
+}

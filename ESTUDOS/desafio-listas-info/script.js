@@ -13,7 +13,7 @@ function add(){
         listaAdd.push(numForm.value)
         const listaAddCrescente = listaAdd.sort((a,b) => a - b)
         numForm.value = ""
-        numForm.setAttribute('placeholder',"Digite outra nota")
+        numForm.setAttribute('placeholder',"Digite outro número")
         numForm.focus()
     }
 }
@@ -30,18 +30,23 @@ function verResultado(){
     const tot = listaAdd.length //total de números na lista
     const tipotot = typeof tot
     let soma = 0
+    let valoresInformados = "👉 "
     const tiposoma = typeof soma
     for (let cont = 0; cont < listaAdd.length; cont++){
         soma += Number(listaAdd[cont])
+        valoresInformados += `${listaAdd[cont]} ...`
     }
-
 
     const respHTML = document.querySelector('ul.resposta')
     respHTML.innerHTML = ""
+
+    const totalDeNumeros = document.createElement('li')
+    respHTML.appendChild(totalDeNumeros)
+    totalDeNumeros.textContent = `Você inforou ${tot} número(s).`
     
     const valoresCrescente = document.createElement('li')
     respHTML.appendChild(valoresCrescente)
-    valoresCrescente.textContent = `Os valores digitados são: [${listaAdd}]`
+    valoresCrescente.textContent = `Os valores digitados são: ${valoresInformados}`
     
     const MenorValor = document.createElement('li')
     respHTML.appendChild(MenorValor)
@@ -51,9 +56,6 @@ function verResultado(){
     respHTML.appendChild(MaiorValor)
     MaiorValor.textContent = `O maior valor é ${listaAdd[listaAdd.length -1]}.`
 
-    const totalDeNumeros = document.createElement('li')
-    respHTML.appendChild(totalDeNumeros)
-    totalDeNumeros.textContent = `Você inforou ${tot} número(s).`
     
     const SomaValores = document.createElement('li')
     respHTML.appendChild(SomaValores)
@@ -61,7 +63,11 @@ function verResultado(){
 
     const MediaValores = document.createElement('li')
     respHTML.appendChild(MediaValores)
-    MediaValores.textContent = `A média entre eles é: ${soma/tot}`
+    MediaValores.textContent = `A média entre eles é: ${(soma/tot).toFixed(2)}`
+
+    const mensagem = document.createElement('li')
+    respHTML.appendChild(mensagem)
+    mensagem.textContent = "👈 Essa carinnha ai foi colocada no CSS tá! Vê lá."
     }
     
     
