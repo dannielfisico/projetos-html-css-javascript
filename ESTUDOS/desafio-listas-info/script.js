@@ -15,21 +15,6 @@ function add(){
         numForm.value = ""
         numForm.setAttribute('placeholder',"Digite outra nota")
         numForm.focus()
-        const soma = somar()
-        // const mostrarResultado = somar()
-
-            //inicio da soma dos valores contidos no array
-            const example = listaAdd
-            function somar() {
-                var somatorio = 0
-                for (let cont = 0; cont < example.length; cont++){
-                    somatorio += example[cont]
-                }
-                return somatorio
-            }
-            const mostrarResultado = somar()
-            console.log(mostrarResultado)
-            // fim do somatório      
     }
 }
 
@@ -42,6 +27,15 @@ function verResultado(){
     if (listaAdd.length == 0) {
         alert('Adicione valores')
     } else {
+    const tot = listaAdd.length //total de números na lista
+    const tipotot = typeof tot
+    let soma = 0
+    const tiposoma = typeof soma
+    for (let cont = 0; cont < listaAdd.length; cont++){
+        soma += Number(listaAdd[cont])
+    }
+
+
     const respHTML = document.querySelector('ul.resposta')
     respHTML.innerHTML = ""
     
@@ -56,14 +50,18 @@ function verResultado(){
     const MaiorValor = document.createElement('li')
     respHTML.appendChild(MaiorValor)
     MaiorValor.textContent = `O maior valor é ${listaAdd[listaAdd.length -1]}.`
+
+    const totalDeNumeros = document.createElement('li')
+    respHTML.appendChild(totalDeNumeros)
+    totalDeNumeros.textContent = `Você inforou ${tot} número(s).`
     
     const SomaValores = document.createElement('li')
     respHTML.appendChild(SomaValores)
-    SomaValores.textContent = `A soma dos valores é: a calcular... `
+    SomaValores.textContent = `A soma dos valores é: ${soma} `
 
     const MediaValores = document.createElement('li')
     respHTML.appendChild(MediaValores)
-    MediaValores.textContent = `A média entre eles é:   a calcular...`
+    MediaValores.textContent = `A média entre eles é: ${soma/tot}`
     }
     
     
@@ -115,18 +113,20 @@ function limparDadosAlternativa(){
     
 }
 
-/*inicio da soma dos valores contidos no array
-const example = [1,2,3]
+
+
+/*inicio da soma dos valores contidos no array 
 
 function somar() {
+    // const example = listaAdd.value
     var somatorio = 0
-    for (let cont = 0; cont < example.length; cont++){
-        somatorio += example[cont]
+    for (let cont = 0; cont < listaAdd.length; cont++){
+        somatorio += listaAdd[cont]
     }
     return somatorio
 }
 
-
+/*
 const mostrarResultado = somar()
 console.log(mostrarResultado)
 */
