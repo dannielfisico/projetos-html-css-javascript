@@ -8,7 +8,7 @@ function add(){
     const numForm = document.querySelector('input#num') /*Captura e armazena nessa variável o input com id num*/
     
     //Verificar se o número já foi inserido no array
-    if (listaAdd.indexOf(numForm.value) == 0){
+    if (listaAdd.indexOf(numForm.value) != -1){
         alert('Já adicionado')
     }else {
         if (numForm.value == ""){
