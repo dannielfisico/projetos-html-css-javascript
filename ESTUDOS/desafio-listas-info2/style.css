@@ -1,0 +1,13 @@
+@charset 'utf-8';
+
+.oculto {
+    display: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+li::before {
+    content: '😉 ';
+}
