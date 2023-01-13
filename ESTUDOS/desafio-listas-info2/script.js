@@ -145,3 +145,8 @@ const mostrarResultado = somar()
 console.log(mostrarResultado)
 */
 
+function definirCor(){
+    const corSelecionada = document.querySelector('input#cor').value
+    document.body.style.backgroundColor = corSelecionada
+
+}
