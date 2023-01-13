@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+}
+
+main {
+    width: 600px;
+    text-align: center;
+    margin: auto;
+}
+
+.vermelho{
+    width: 280px;
+    display: inline-block;
+    padding: 10px;
+    border: solid red 1px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 5px;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.568);
+}
+
+.vermelho > span {
+    background-color: red;
+    color: #fff;
+    padding: 3px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.verde{
+    width: 280px;
+    display: inline-block;
+    padding: 10px;
+    border: solid green 1px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 5px;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.568);
+
+}
+
+.verde > span {
+    background-color: green;
+    color: #fff;
+    padding: 3px;
+    border-radius: 15px;
+    text-align: center;
+    
+}
+
+.azul{
+    width: 280px;
+    display: inline-block;
+    padding: 10px;
+    border: solid blue 1px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 5px;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.568);
+}
+
+.azul > span {
+    background-color: blue;
+    color: #fff;
+    padding: 3px;
+    border-radius: 15px;
+}
+
+
+.alfa {
+    width: 280px;
+    display: inline-block;
+    padding: 10px;
+    border: solid yellow 1px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 5px;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.568);
+}
+
+.alfa > span {
+    background-color: yellow;
+    color: rgb(0, 0, 0);
+    padding: 3px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.container {
+    width: 300px;
+    margin: auto;
+}
+
+.foto {
+    /* position: relative; */
+    display: block;
+    width: 300px;
+    height: 300px;
+    background-image: url('./../desafio-android/imagens/dannielfisico.jpg');
+}
+
+.quadrado {
+    /* margin-left: 15px; */
+    position: relative;
+    margin-top: -300px;
+    margin-left: 0px;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 1);
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.568);
+}
+
+footer > p {
+    text-align: center;
+    background-color: teal;
+    color: #fff;
+}
+
+
+/************************************************************/
+/* altera a cor do range para vermelho no navegador Firefox*/
+.vermelho > input::-moz-range-progress {
+    background-color: rgb(255, 0, 0);
+}
+
+.verde > input::-moz-range-progress {
+    background-color: rgb(0, 128, 0);
+}
+.azul > input::-moz-range-progress {
+    background-color: rgb(0, 0, 255);
+}
+.alfa > input::-moz-range-progress {
+    background-color: rgb(255, 251, 0);
+}
+/*altera a cor do range para vermelho no navegador Firefox*/
+/************************************************************/
+
+/* Teste pseudo classes */
+
+h3::selection {
+    color: red;
+    
+}
+
+.erro {
+    display: none;
+}
+
+/* h3::first-letter {
+    font-size: 2em;
+} */
