@@ -2,7 +2,7 @@ const quadrado = document.querySelector('.quadrado')
 let cor1 = 0 //Canal R
 let cor2 = 0 //Canal G
 let cor3 = 0 //Canal B
-let alfa = 0 //canal A (alfa transparência em rgba)
+let alfa = 1000 //canal A (alfa transparência em rgba)
 
 function mudarCor1(){
     const cor2atual = cor2
