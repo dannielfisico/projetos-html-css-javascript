@@ -42,7 +42,7 @@ function verResultado(){
 
     const totalDeNumeros = document.createElement('li')
     respHTML.appendChild(totalDeNumeros)
-    totalDeNumeros.textContent = `Você inforou ${tot} número(s).`
+    totalDeNumeros.textContent = `Você informou ${tot} número(s).`
     
     const valoresCrescente = document.createElement('li')
     respHTML.appendChild(valoresCrescente)
