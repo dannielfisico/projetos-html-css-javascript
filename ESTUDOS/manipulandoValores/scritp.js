@@ -43,8 +43,9 @@ function mudarAlfa(){
     const cor3atual = cor3
     const alfaResp = document.querySelector('span#alfa')
     const alfaSeletorValor = document.querySelector('input#alfa').value
-    const alfaSeletor = alfaSeletorValor/1000
-    alfaResp.innerHTML = `(${alfaSeletor})`
+    const alfaSeletor = alfaSeletorValor/1000 
+    const alfaSeletorPorcento = (alfaSeletorValor/10).toFixed(2)
+    alfaResp.innerHTML = `(${(alfaSeletorPorcento)}%)`
     quadrado.setAttribute('style', 'background-color: rgba('+cor1atual+', '+cor2atual+','+cor3atual+','+ alfaSeletor +')')
     alfa = alfaSeletor
 }
