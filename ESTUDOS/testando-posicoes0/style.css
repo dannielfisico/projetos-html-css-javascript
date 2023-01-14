@@ -1,0 +1,47 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    
+}
+
+:root {
+    --azul: rgb(0, 0, 155);
+    --verde: rgb(0, 179, 0);
+    --laranja: rgb(172, 112, 0);
+}
+
+.exemplo {
+    color: rgb(246, 246, 246);
+    font-weight: 900;
+    background-color: hotpink;
+    
+    /* background-color: hotpink; */
+}
+
+.retangulo {
+    width: 33.333%;
+    height: 150px;
+    display: block;
+}
+
+
+/* Classes modificadoras */
+.verde {
+    background-color: var(--verde); 
+    
+    
+}
+.azul {
+    background-color: var(--azul);
+    
+    
+    
+}
+
+.laranja {
+    background-color: var(--laranja);
+    
+    
+}
+

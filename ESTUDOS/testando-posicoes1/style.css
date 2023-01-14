@@ -1,0 +1,49 @@
+@charset 'utf-8';
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+:root { /*Cores personalizadas em variáveis*/
+    --cor1: rgb(255, 255, 255);
+    --cor2: #8e44ad;
+    --cor3: #c0392b;
+}
+
+.exemplo {
+    width: 33.333%; /*Largura*/
+    height: 200px;/*Altura*/
+    line-height: 200px; /*Altura da Linha*/
+    color: var(--cor1);
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 80%;
+}
+
+.exemplo1 {
+    background-color: var(--cor2);
+    float: left; /*Flutuar à esquerda*/
+    
+    
+}
+
+.exemplo2 { 
+    background-color: var(--cor3);
+    float: right; /*Flutuar à direita*/
+    
+    
+    
+    
+}
+
+.exemplo3 {
+    background-color: yellowgreen;
+    /* margin-left: 66.666%; */
+    overflow: hidden;
+    
+
+}
