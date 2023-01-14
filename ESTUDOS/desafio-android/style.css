@@ -106,11 +106,15 @@ a:hover {
 }
 
 a:visited {
-    color: black;
+    color: #fff;
 }
 
 a::after {
     content: ' 🔗';
+}
+
+.linknormal::after {
+    content: none;
 }
 
 .video {
