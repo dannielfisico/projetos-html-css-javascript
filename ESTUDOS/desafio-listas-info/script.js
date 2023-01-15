@@ -1,5 +1,5 @@
-let listaAdd = [] //um array vazio para armazenar os  números (Atenção: Defini essa variavel com let para que ela seja sobrescria lá na função limparDados)
-let viuResultado = false
+let listaAdd = [] //um array vazio para armazenar os  números (Atenção: Defini essa variavel com let para que ela seja sobrescrita lá na função limparDados)
+let viuResultado = false //Essa variável difinida como falsa até o usuario ver o resultado pela primeira vez, quando então ela será definida como true
 const botoesOcultos = document.getElementsByClassName('oculto')
 function add(){
     limparConsole()
@@ -36,7 +36,7 @@ function verResultado(){
         soma += Number(listaAdd[cont])
         valoresInformados += `${listaAdd[cont]} ...`
     }
-
+    
     const respHTML = document.querySelector('ul.resposta')
     respHTML.innerHTML = ""
 
