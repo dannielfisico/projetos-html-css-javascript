@@ -2,7 +2,7 @@ const quadrado = document.querySelector('.quadrado')
 let cor1 = 0 //Canal R
 let cor2 = 0 //Canal G
 let cor3 = 0 //Canal B
-let alfa = 1000 //canal A (alfa transparência em rgba)
+let alfa = 500 //canal A (alfa transparência em rgba)
 
 function mudarCor1(){
     const cor2atual = cor2
@@ -54,6 +54,26 @@ function mudarAlfa(){
 function erroEnviar(){
     const erro = document.querySelector('.erro')
     alert(erro.innerHTML)
+
+}
+
+function carregar(){
+    const urlformulario = document.querySelector('input#endereco').value
+    const fotografia = document.querySelector('img.foto')
+    const controlesOcultos = document.getElementsByClassName('oculto')
+
+    if(urlformulario == ""){
+        alert('Ponha o endereço URL da imagem a ser editada!')
+    }else {
+
+    fotografia.setAttribute('src',urlformulario)
+    controlesOcultos[0].setAttribute('style','display: inline-block')
+    controlesOcultos[1].setAttribute('style','display: inline-block')
+
+    const formCarregarFoto = document.getElementsByClassName('formCarregarFoto')
+    formCarregarFoto[0].setAttribute('style','display: none')
+
+}
 
 }
 
