@@ -1,0 +1,71 @@
+@charset 'utf-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
+
+@font-face {
+    font-family: 'Smile' ;
+    src: url('./fonts/Purple\ Smile.otf');
+    font-weight: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --cor1: #aceca1;
+    --cor2: #508484;
+    --cor3: #ffbcb5;
+}
+
+body {
+    background-color: var(--cor1);
+}
+
+main {
+    max-width: 800px;
+    min-width: 260px;
+    margin: 20px auto 20px auto;
+    border: var(--cor3) solid;
+    padding: 20px;
+}
+
+article  {
+    margin: auto;
+    background-color: var(--cor2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.486);
+    
+}
+
+h1 {
+    font-family: smile;
+    text-align: center;
+    color: var(--cor3);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.486);
+
+}
+
+p {
+    text-indent: 35px;
+    text-align: justify;
+    font-family: 'Kalam', cursive;
+    color: var(--cor1);
+}
+
+p::selection {
+    color: var(--cor3);
+}
+
+img {
+    width: 100%;
+}
+
+abbr {
+    text-decoration: none;
+    font-family: 'Kalam', cursive;
+}
