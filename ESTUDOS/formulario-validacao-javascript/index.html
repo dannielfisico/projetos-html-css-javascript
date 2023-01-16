@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Cadastro</title>
+</head>
+<body>
+    <h1>Cadastre-se em nosso Banco Emprego</h1>
+    <form id="form">
+        <div id="externa">
+            <div id="interna"></div>
+        </div>
+
+        <label for="nome">Nome:</label>
+        <input type="text" name="name" id="name" onkeypress="progresso1()">
+
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email" onkeypress="progresso2()">
+
+        <label for="password">Senha:</label>
+        <input type="password" name="password" id="password" oninput="progresso3()">
+
+        <label for="job">Situção de Trabalho:</label>
+        <select name="job" id="job">
+            <option value="">Está buscando emprego?</option>
+            <option value="yes">Sim</option>
+            <option value="no">Não</option>
+        </select>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea name="mensage" id="mensage"></textarea>
+
+        <button type="submit">Enviar</button>
+
+    </form>
+</body>
+</html>
