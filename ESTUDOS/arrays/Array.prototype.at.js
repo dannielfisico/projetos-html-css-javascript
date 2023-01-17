@@ -4,4 +4,5 @@ const frutas = ['laranja', 'maçã', 'abacaxi','pêra']
 
 /*Quando um valor negativo é passado como argumento a contagem dos elementos é feita de trás para frente.*/
 
-const ultimaFruta = frutas.at(-1)
+const ultimaFruta = frutas.at(-1) /*pêra*/
+const penultimaFruta = frutas.at(-2) /*abacaxi*/
