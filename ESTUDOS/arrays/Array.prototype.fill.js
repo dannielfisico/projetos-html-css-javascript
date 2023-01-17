@@ -7,8 +7,10 @@ Sintaxe
 const frutas = ['laranja', 'maçã', 'abacaxi','pêra']
 const frutas2 = ['laranja', 'maçã', 'abacaxi','pêra']
 const frutas3 = ['laranja', 'maçã', 'abacaxi','pêra']
-frutas.fill('y') //todos array frutas foi preenchido com y
+frutas.fill('y') //todod os itens do array frutas foi preenchido com y
 console.log(frutas)
 const penultimaFruta2 = frutas2.length - 1
-frutas2.fill('z',1,penultimaFruta2) //preenche com z a partir do index 1 até o tamanho deste (this) array
+frutas2.fill('z',1,penultimaFruta2) 
+frutas3.fill('k',2, this.length) //preenche com k a partir do index 2 até o tamanho deste (this) array
 console.log(frutas2)
+console.log(frutas3)
