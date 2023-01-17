@@ -9,8 +9,11 @@ console.log(frutas)
 const visitantes = ['Daniel', 'João', 'Marcos', 'Jamila', 'Gabriel']
 const clientes = []
 //transferir os visitantes para clientes
-
+/*
 while((i = visitantes.shift()) !== undefined){
+    clientes.push(i)
+}*/
+while((i = visitantes.pop()) !== undefined){
     clientes.push(i)
 }
 
