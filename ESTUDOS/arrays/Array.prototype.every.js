@@ -3,6 +3,14 @@
  */
 
  const idade = [18, 30, 39, 29, 25, 18];
+ 
+ /**
+  * Função que testa cada elemento, recebe três parametros:
+  * @param {*} elemento obrigatório. O elemento atual sendo processado na array.
+  * @param {*} index opcional. O índice do elemento atual sendo processado na array.
+  * @param {*} lista opcional. O array de origem.
+  * @returns 
+  */
  function eMaior18(elemento, index, lista){
      return elemento >= 18
  }
