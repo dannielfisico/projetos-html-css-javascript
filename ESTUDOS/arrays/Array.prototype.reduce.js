@@ -39,3 +39,24 @@ const totalDeAlunos = participantes.reduce(function(soma, atual){
 
 console.log(totalAlunos)
 console.log(totalDeAlunos)
+
+const carrinhoCompras = [
+    {produto: 'Mesa', quantidade: 3, preco: 189},
+    {produto: 'Cadeira', quantidade: 12, preco: 69},
+    {produto: 'Almofada', quantidade: 12, preco: 49},
+    {produto: 'Prato', quantidade: 14, preco: 39},
+]
+//Qual a quantidade de produtos do carrinho?
+const qtdProdutos = carrinhoCompras.reduce(function(qtdInicial, qtdAtual){
+    return qtdInicial + qtdAtual.quantidade
+},0)
+
+console.log(`Exitem ${qtdProdutos} produtos no carrinho.`)
+
+//Qual valor total dos itens que estão no carrinho de compras? 2529
+const totalPagar = carrinhoCompras.reduce(function(totalInicial, atual){
+    return totalInicial + atual.quantidade * atual.preco
+},0)
+
+console.log(`O total a pagar é: R$${totalPagar.toFixed(2)}.`)
+
