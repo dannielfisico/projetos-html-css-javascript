@@ -98,7 +98,7 @@ img {
 }
 
 img#bugdroid {
-    width: 60%;
+    width: 50%;
 }
 
 a {
@@ -122,14 +122,26 @@ a::after {
 .linknormal::after {
     content: none;
 }
-
-.video {
+.refvideo {
     background-color: #1A5C38;
-    text-align: center;
     padding: 20px;
-    margin-bottom: 20px;
+}
+.video {
+        
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    
     
 }
+
+iframe{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 
 .banner {
     margin: 15px;
