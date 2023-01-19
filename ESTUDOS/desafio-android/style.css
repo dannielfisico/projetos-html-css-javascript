@@ -28,8 +28,9 @@ li {
 }
 
 li:hover {
-    background-color: rgba(255, 255, 255, 0.541);
-    color: #1A5C38;
+    background-color: #1A5C38 ;
+
+    color: #fff;
     transition: 900ms;
 }
 
@@ -42,7 +43,8 @@ h1 {
 
 main {
     background-color: #fff;
-    width: 900px;
+    max-width: 900px;
+    min-width: 300px;
     margin: auto;
     margin-top: 4px;
     margin-bottom: 15px;
@@ -79,6 +81,10 @@ h2 {
 h5 {
     text-align: center;
     color: #fff;
+    max-width: 600px;
+    display: block;
+    margin: auto;
+    padding: 0px 40px 0px 40px;
     
 }
 
@@ -129,6 +135,7 @@ a::after {
     margin: 15px;
     background-color: #43b67785;
     border-radius: 10px;
+    
 
 }
 
@@ -140,8 +147,10 @@ h3 {
     border-radius: 10px 10px 0px 0px;
 }
 
+
+
 article {
-    padding: 10px;
+    padding: 20px;
 }
 
 .versoes {
@@ -159,13 +168,21 @@ article {
     content: '✔ ';
 }
 
+.lista {
+    margin: auto;
+    display: block;
+    max-width: 100%;
+    min-width: 250px;
+
+}
+
 div#lista1 {
     
     width: 260px;
     display: inline-block;
     text-align: left;
     padding: 10px;
-    margin-right: 80px;
+    margin-right: auto;
        
 }
 
@@ -173,9 +190,9 @@ div#lista2 {
     
     width: 210px;
     display: inline-block;
-    padding: 0px;
+    padding: 10px;
     margin: 10px; 
-    margin: 0;
+    margin: auto;
 }
 
 footer {
