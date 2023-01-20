@@ -80,7 +80,13 @@ a.menu:hover{
 
 a.externo {
     text-decoration: none;
+    color: #35BF73;
+    font-weight: bold;
 
+}
+
+a.externo::after{
+    content: ' 🔗';
 }
 main {
     max-width: 900px;
@@ -101,7 +107,7 @@ p {
 }
 
 main img.pequena {
-    width: 50%;
+    max-width: 350px;
 }
 
 img {
@@ -157,8 +163,12 @@ ul {
     columns: 2;
 }
 
+li {
+    list-style-type: none;
+}
+
 li::before{ 
-    content: '';
+    content: '✔ ';
 }
 
 footer {

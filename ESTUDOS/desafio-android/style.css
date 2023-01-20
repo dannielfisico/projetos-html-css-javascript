@@ -113,7 +113,7 @@ a:hover {
 }
 
 a:visited {
-    color: #fff;
+    color: rgb(10, 99, 17);
 }
 
 a::after {
@@ -190,9 +190,6 @@ article {
 }
 
 div#lista {
-    
-  
-    
     text-align: left;
     padding: 10px;
     margin-right: auto;
