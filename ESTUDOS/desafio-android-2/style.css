@@ -24,15 +24,29 @@ body {
 
 header {
     background-image: linear-gradient(to top, var(--cor2), var(--cor1));
-    color: #fff;
-    
+    color: #fff;    
     padding: 20px;
     
 }
 
-h1 {
+.principal {
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    color: #fff;
+}
+
+h1 {
+    font-family: 'idroid';
+    color: var(--cor2);
     padding: 10px;
+}
+
+h2 {
+    font-family: 'idroid';
+    color: var(--cor2);
+    text-indent: 8px;
+    padding: 3px;
+    background-image: linear-gradient(to right, var(--cor1), var(--cor3));
 }
 
 h4 {
@@ -44,46 +58,37 @@ nav {
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.438);
 }
 
-a {
+a.menu {
     text-decoration: none;
     color: #fff;
     list-style-type: none;
     display: inline-block;
     margin-right: 8px;
     font-weight: bold;
-    padding: 8px 15px 8px 15px;
+    padding: 8px 10px 8px 10px;
 }
 
-a:hover{
+a.menu:hover{
     background-color: var(--cor3);
     border-radius: 5px;
     transition: 1200ms;
     cursor: pointer;
 }
 
+a.externo {
+    text-decoration: none;
+
+}
 main {
     max-width: 900px;
     min-width: 300px;
     margin: 3px auto 20px auto;
-    padding: 15px 15px 15px 15px;
+    padding: 20px 20px 20px 20px;
     background-color: #fff;
 
 }
 
-h2 {
-    font-family: 'idroid';
-    color: var(--cor2);
-    text-indent: 8px;
-    padding: 3px;
-}
 
-h3 {
-    font-family: 'idroid';
-    color: var(--cor2);
-    text-indent: 8px;
-    padding: 3px;
-    background-image: linear-gradient(to right, var(--cor1), var(--cor3));
-}
 
 p {
     text-align: justify;
@@ -91,6 +96,11 @@ p {
     margin-bottom: 15px;
     margin-top: 15px;
 }
+
+img {
+    display: block;
+    margin: auto;
+}    
 
 
 /* Responsividade da área video youtube*/
@@ -110,4 +120,19 @@ iframe {
     width: 100%;
     height: 100%;
     border: none;
+}
+
+/* Fim Responsividade da área video youtube*/
+
+aside {
+    
+}
+
+ul {
+    padding: 20px;
+    columns: 2;
+}
+
+li::before{ 
+    content: '';
 }
