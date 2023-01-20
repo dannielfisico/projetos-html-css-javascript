@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+:root {
+    --cor1: #AB3EB5;
+    --cor2: #DB4FE8;
+    --cor3: #E597EC;
+}/* Cores em variáveis */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+header {
+    background-color: var(--cor1);
+    padding: 10px 0px 10px 0px;
+}
+
+header > h1 {
+    color: var(--cor3);
+    text-align: center;
+}
+
+main {
+    background-color: var(--cor2);
+    width: 900px;
+    height: 1200px;
+    margin: auto;
+    position: relative;
+}
+
+.quadrado {
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    border: 1px solid red;
+    background-color: yellow;
+    position: absolute;
+    
+}
