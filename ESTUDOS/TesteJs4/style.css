@@ -1,0 +1,10 @@
+.oculto {
+    display: none;
+    transition: 1000ms;
+}
+
+div {
+    padding: 20px;
+    width: 500px;
+}
+
