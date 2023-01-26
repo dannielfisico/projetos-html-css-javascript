@@ -1,1 +1,13 @@
 @charset "utf-8";
+
+@font-face {
+    font-family: 'Ballones';
+    src: url('./font/Ballones\ Script.otf');
+}
+
+h1 {
+    font-family: 'Ballones';
+    text-align: center;
+    color: rgb(241, 177, 177);
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);
+}
