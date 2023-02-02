@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 @font-face {
-    font-family: 'Ballones';
-    src: url('./font/Ballones\ Script.otf');
+    font-family: Ballones;
+    src: url(./font/Ballones\ Script.otf);
 }
 
 h1 {
