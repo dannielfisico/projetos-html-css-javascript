@@ -1,3 +1,4 @@
+// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyDtyr8Er2dNA-TmOsDnbJwSGff9tBmVdgI",
   authDomain: "colegio-733df.firebaseapp.com",
@@ -36,10 +37,12 @@ docRef.get().then((doc) => {
   console.log(`O aluno ${aluno} obteve Nota1 = ${nota1} e Nota2 = ${nota2} e ${media}`)
 })
 */
-
+/*
 banco.collection('turmaA').where('nome', '!=', 'Ana').get().then((snapshot) => {
     snapshot.forEach(doc => {
       let aluno = doc.data()
       console.log(aluno.nome, aluno.sobrenome)
     });
 })
+*/
+
