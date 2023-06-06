@@ -9,4 +9,20 @@
 
  */
 
- 
+ //Criação de promessa
+
+ const myPromise = new Promise((resolve, reject)=> {
+    const nome = 'Daniel1'
+
+    if(nome === 'Daniel'){
+        resolve(`Usuário ${nome} encontrado.`)
+    }else {
+        reject(`Usuário ${nome} não foi encontrado.`)
+    }
+ }).catch(erro => {
+    console.log(erro)
+ })
+
+ myPromise.then( (dados) => {
+    console.log(dados)
+ })
