@@ -9,20 +9,62 @@
 
  */
 
- //Criação de promessa
-
+//#region Criação de promessa
+/*
  const myPromise = new Promise((resolve, reject)=> {
-    const nome = 'Daniel1'
+    const nome = 'Daniel'
 
     if(nome === 'Daniel'){
         resolve(`Usuário ${nome} encontrado.`)
     }else {
         reject(`Usuário ${nome} não foi encontrado.`)
     }
- }).catch(erro => {
-    console.log(erro)
  })
 
  myPromise.then( (dados) => {
     console.log(dados)
  })
+*/
+ //#endregion
+
+ //#region Encadeamento de then's
+
+const myPromise2= new Promise((resolve, reject) => {
+    const cliente = 'Beto'
+
+    if(cliente === 'Beto'){
+        resolve(`O cliente ${cliente} foi encontrado.`)
+    } else {
+        reject(`O cliente ${cliente} NÃO foi encontrado.`)
+    }
+})
+
+myPromise2.then((data) => {
+    return data.toUpperCase()
+}).then(frase => {
+    console.log(frase)
+})
+
+ //#endregion
+
+ //#region Usando o método catch()
+
+//criação da promessa
+
+const myPromise3 = new Promise((resolve, reject) => {
+    const nota = '8.5'
+    if(nota >= 7){
+        resolve('Aprovado')
+    } else {
+        reject('Reprovado')
+    }
+})
+
+myPromise3.then(situacao => {
+    return situacao.toUpperCase()
+}).then(situacaoNova => {
+    console.log(situacaoNova)
+})
+
+
+ //#endregion
