@@ -66,7 +66,7 @@ agenda.collection('clientes').where('estado','!=','Mato Grosso do Sul').get().th
 */
 //#endregion
   
-//#region 
+//#region Adicionar novos documentos na coleção existente
 
 /*
     agenda.collection('turmas').add({
@@ -232,11 +232,42 @@ agenda.collection('clientes').doc('cliente5').update(
 //#endregion
 
 //#region Apagar um documento inteiro
+/*
 agenda.collection('clientes').doc('Fi996Hr0GWJVXTCvT1m6').delete().then(() => {
     console.log('Cliente apagado com sucesso!')
 }
 ).catch(erro => {
     console.log(erro)
 })
+*/
+//#endregion
+
+//#region exercitando: Adicionando novas coleções
+
+
+document.getElementById('btn').onclick = () => {
+    alert('clicou!!!!')
+
+}
+
+/*
+
+agenda.collection('assinantes').add(
+    {
+        nome: 'Nanda',
+        sobrenome: 'Oliveira Pontes',
+        cidade: 'Guaraciaba do Norte'
+    }
+).then((doc) => {
+    console.log(`O assinante foi adicionando.`)
+}).catch(erro => {
+    console.log(erro)
+})
+
+*/
+
+
+
+
 
 //#endregion
