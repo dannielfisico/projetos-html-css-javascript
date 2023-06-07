@@ -9,8 +9,27 @@
  * */    
 
 //#endregion
+ 
+//#region  Sintaxe da função assincrona 
 
-//#region 
+ function primeiraFuncao(){
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log(`Esperou isso aqui!!`)
+            resolve()
+        },2000 )
+    })
+
+}
+
+document.getElementById('btn').onclick = async () => {
+    console.log('Inicio')
+   await primeiraFuncao()
+    console.log('Terminou')
+}
+
+
+
 
 
 //#endregion
