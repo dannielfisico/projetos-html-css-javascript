@@ -4,9 +4,9 @@ const myPromise = new Promise((resolve, reject) => {
     const usuario = 'Daniel'
 
     if (usuario === "Daniel"){
-        resolve ('Usuário Daniel encontrado')
+        resolve ('Usuário Daniel encontrado Exemplo 01')
     } else {
-        reject ("Usuário Daniel não foi encontrado")
+        reject ("Usuário Daniel não foi encontrado Exemplo 01")
     }
 })
 
@@ -18,17 +18,17 @@ myPromise.then((dadosDaPromessa) => {
 //#region Encadeamento de then's - Exemplo 02
 
 const myPromise2 = new Promise((resolve, reject) => {
-    const usuario = 'Daniela'
+    const usuario = 'Daniel'
 
     if (usuario === "Daniel"){
-        resolve ('Usuário Daniel encontrado')
+        resolve ('Usuário Daniel encontrado Exemplo 02')
     } else {
-        reject ("Usuário Daniel não foi encontrado")
+        reject ("Usuário Daniel não foi encontrado Exemplo 02")
     }
 })
 
-myPromise2.then((dadosDaPromessa) => {
-   return dadosDaPromessa.toUpperCase()
+myPromise2.then((dadosDaPromessa2) => {
+   return dadosDaPromessa2.toUpperCase()
 }).then((retornoEmMaiuscula) => {
     console.log(retornoEmMaiuscula)
 })
@@ -40,11 +40,36 @@ const myPromise3 = new Promise((resolve, reject) => {
     const usuario = 'Daniela'
 
     if (usuario === "Daniel"){
-        resolve ('Usuário Daniel encontrado')
+        resolve ('Usuário Daniel encontrado Exemplo 03')
     } else {
-        reject ("Usuário Daniel não foi encontrado")
+        reject ("Usuário Daniel não foi encontrado Exemplo 03")
     }
 })
 
+myPromise3.then((dadosDaPromessa3) => {
+    console.log(dadosDaPromessa3)
+}).catch((err) => {
+    console.log(`Ocorreu um erro: ${err}`)
+})
+
+//#endregion
+
+//#region Resolver várias promessas com all- Exemplo 04
+
+const promessa4 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('Promessa04 - ok!')
+    }, 5000)
+})
+const promessa5 = new Promise((resolve, reject) => {
+    resolve('Promessa05 - ok!')
+})
+const promessa6 = new Promise((resolve, reject) => {
+    resolve('Promessa06 - ok!')
+})
+
+const resolverTodas = Promise.all([promessa4, promessa5, promessa6]).then((dados)=>{
+    console.log(dados)
+})
 
 //#endregion
