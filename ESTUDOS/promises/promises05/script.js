@@ -17,13 +17,13 @@ document.getElementById('btnBuscar').onclick = () => {
         return dadosDaResposta.json() //converte a resposta em json para que possamos pegar os dados
     }).then( (dadosDaRespostaJSON) => {
         console.log(dadosDaRespostaJSON) //imprime o objeto json
-        let local
-            if(dadosDaRespostaJSON.location != null){
-                local = dadosDaRespostaJSON.location
-            } else {
+        let localização //variável definida para receber a localização do usuário
+            if(dadosDaRespostaJSON.location === null){
                 local = 'algum lugar não definido.'
+            } else {
+                localização = dadosDaRespostaJSON.location
             }
-        document.getElementById('legenda').innerHTML = `${dadosDaRespostaJSON.name} de ${local}`
+        document.getElementById('legenda').innerHTML = `${dadosDaRespostaJSON.name} de ${localização}`
         document.getElementById('perfil').src = dadosDaRespostaJSON.avatar_url
         document.getElementById('nomeUsuario').value = ""
     })
