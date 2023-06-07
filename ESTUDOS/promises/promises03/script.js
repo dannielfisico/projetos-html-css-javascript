@@ -94,3 +94,26 @@ const resolverTodasRace = Promise.race([promessa7, promessa8, promessa9]).then((
 
 //#endregion
 
+//#region Fetch request na API do GitHub
+// Fetch API
+
+document.getElementById('btnVerificar').onclick = () => {
+
+const userName = document.getElementById('nomeDoUsuario')
+
+fetch(`https://api.github.com/users/${userName.value}`, {
+    method: 'GET',
+    headers: {
+        Accept: 'application/vnd.github.v3+json'
+    }
+}).then((resposta) => {
+    console.log(typeof resposta)
+    console.log(resposta)
+    return resposta.json()
+}).then((dadosDaResposta) => {
+    console.log(dadosDaResposta)
+    console.log(`O nome do usuário é ${dadosDaResposta.name}`)
+    document.getElementById('avatar').src = dadosDaResposta.avatar_url
+})
+}
+//#endregion
