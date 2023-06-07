@@ -71,7 +71,7 @@ myPromise3.then(situacao => {
  //#region 
 
 
-function logar(){
+function logar222(){
     const usuario = document.getElementById('usuario')
     const senha = document.getElementById('senha')
     const btnLogin = document.getElementById('btnLogin')
@@ -84,5 +84,28 @@ function logar(){
     }})
 }
 
+//outra forma mais correta
+function logar(){
+    const usuario = document.getElementById('usuario')
+    const senha = document.getElementById('senha')
+    const btnLogin = document.getElementById('btnLogin')
+
+    myPromise4.then(situacao => {
+        if("aprovado"){
+            window.location.href = "./logou.html"
+        } else {
+            console.log("Falha no login!")
+            alert("Falha no login!")
+        }
+    })
+
+}
+
+const myPromise4 = new Promise((resolve, reject) => {
+    if (usuario.value == 'daniel' && senha.value == "123" ){
+        resolve ('aprovado')
+    } else {
+        reject ('reprovado')
+    }})
 
  //#endregion
