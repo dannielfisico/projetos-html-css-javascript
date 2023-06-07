@@ -33,10 +33,12 @@ function logarse(){
 
 
 function acessar(){
-    const user = document.getElementById('usuario').value
-    if (user != "Daniel"){
-        alert("Rejeitado seu acesso")
+    var user = document.getElementById('usuario')
+    if (user.value != "Daniel"){
+        alert("Rejeitado seu acesso");
     } else {
-        window.location.href = "./logou.html"
+        window.location.href = "./logou.html";
+        
     }
 }
+
