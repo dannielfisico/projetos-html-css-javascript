@@ -1,11 +1,11 @@
 
 h1 {
     text-align: center;
-    color: green;
+    color: rgb(255, 255, 255);
 }
 
 body {
-    background-color: black;
+    background-color: rgba(143, 197, 211, 0.986);
 }
 
 img {
@@ -20,5 +20,6 @@ input {
     width: 200px;
     display: block;
     margin: auto;
-
+    box-sizing: border-box;
+    margin-top: 10px;
 }
