@@ -114,6 +114,8 @@ fetch(`https://api.github.com/users/${userName.value}`, {
     console.log(dadosDaResposta)
     console.log(`O nome do usuário é ${dadosDaResposta.name}`)
     document.getElementById('avatar').src = dadosDaResposta.avatar_url
+}).catch((err)=> {
+    console.log(`Houve um erro: ${err}`)
 })
 }
 //#endregion

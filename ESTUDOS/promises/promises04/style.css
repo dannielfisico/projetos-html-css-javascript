@@ -1,0 +1,15 @@
+input {
+    display: block;
+    width: 180px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+img {
+    width: 350px;
+    height: 350px;
+}
+
+.container {
+    text-align: center;
+}
