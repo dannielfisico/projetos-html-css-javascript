@@ -10,7 +10,7 @@
  */
 
 //#region Criação de promessa
-/*
+
  const myPromise = new Promise((resolve, reject)=> {
     const nome = 'Daniel'
 
@@ -24,7 +24,7 @@
  myPromise.then( (dados) => {
     console.log(dados)
  })
-*/
+
  //#endregion
 
  //#region Encadeamento de then's
@@ -45,12 +45,12 @@ myPromise2.then((data) => {
     console.log(frase)
 })
 
- //#endregion
+//#endregion
 
- //#region Usando o método catch()
+//#region Usando o método catch()
 
+//#region 
 //criação da promessa
-
 const myPromise3 = new Promise((resolve, reject) => {
     const nota = '8.5'
     if(nota >= 7){
@@ -62,9 +62,27 @@ const myPromise3 = new Promise((resolve, reject) => {
 
 myPromise3.then(situacao => {
     return situacao.toUpperCase()
-}).then(situacaoNova => {
+}).then(situacaoNova => { 
     console.log(situacaoNova)
 })
+
+ //#endregion
+
+ //#region 
+
+
+function logar(){
+    const usuario = document.getElementById('usuario')
+    const senha = document.getElementById('senha')
+    const btnLogin = document.getElementById('btnLogin')
+
+ const myPromise4 = new Promise((resolve, reject) => {
+    if (usuario.value == 'daniel' && senha.value == "123" ){
+        resolve (window.location.href = "./logou.html")
+    } else {
+        reject (alert(`Impossível acesso com essas credenciais`))
+    }})
+}
 
 
  //#endregion
