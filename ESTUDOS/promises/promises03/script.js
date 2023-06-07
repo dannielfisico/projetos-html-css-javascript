@@ -73,3 +73,24 @@ const resolverTodas = Promise.all([promessa4, promessa5, promessa6]).then((dados
 })
 
 //#endregion
+
+//#region Resolver várias promessas com race- Exemplo 05
+
+const promessa7 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('Promessa07 race - ok!')
+    }, 5000)
+})
+const promessa8 = new Promise((resolve, reject) => {
+    resolve('Promessa08 race - ok!')
+})
+const promessa9 = new Promise((resolve, reject) => {
+    resolve('Promessa09 race - ok!')
+})
+
+const resolverTodasRace = Promise.race([promessa7, promessa8, promessa9]).then((dados)=>{
+    console.log(dados)
+})
+
+//#endregion
+
