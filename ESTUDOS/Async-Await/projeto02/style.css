@@ -1,0 +1,41 @@
+img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: auto;
+    padding: 10px;
+    border-radius: 50%;
+    border: dotted red;
+}
+
+#principal {
+    width: 500px;
+    height: 350px;
+    margin: auto;
+    border: solid black;
+    text-align: center;
+    display: block;
+    
+}
+
+#info {
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+    padding: 0px;
+    /* border: solid red; */
+    /* height: 50px; */
+    width: 500px;
+
+}
+
+figcaption {
+    padding: 40px;
+}
+
+form {
+    margin: auto;
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+}
