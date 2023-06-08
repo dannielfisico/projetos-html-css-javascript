@@ -20,7 +20,7 @@ async function mostarUsuario(){
         info.appendChild(lista)
         const item = document.createElement('li')
         lista.appendChild(item)
-        item.innerHTML = `Nome completo: ${usuario.data.first_name} ${usuario.data.last_name}`
+        item.innerHTML = `Nome completo: ${usuario.data.first_name} ${usuario.data.last_name} (${identificador})`
         const item2 = document.createElement('li')
         lista.appendChild(item2)
         item2.innerHTML = `E-mail: ${usuario.data.email}`
@@ -29,7 +29,6 @@ async function mostarUsuario(){
         alert(`Identificador não existente até o momento`)
     }
 }
-
 
 
 //#endregion
