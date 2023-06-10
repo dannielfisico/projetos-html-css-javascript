@@ -21,12 +21,10 @@ header {
 }
 /* Grid de Produtos */
 
-
-
 .container {
     background-color: #eee;
     min-height: 60vh;
-    padding: 50px;
+    padding: 20px;
 
 }
  
@@ -36,7 +34,7 @@ header {
     display: flex;
     flex-wrap: wrap-reverse;
     /* Alinhamento horizontal*/
-    justify-content: left;
+    justify-content: center;
     /* Alinhamento vertical*/
     /* align-items: center; */
 }
@@ -50,7 +48,7 @@ header {
 }
 
 .promocional {
-    order: 1;
+    order: 3;
 }
 
 .product-image {
