@@ -8,7 +8,10 @@
 </head>
 <body>
    <h1>Jogo da Velha</h1>
-   <div class="stage">
+   <main class="area">
+    <div class="area1"></div> <!-- area1 refere-se ao espaço destina as informações do jogo-->
+    <div class="area2"> <!-- area2 refere-se ao espaço destinado ao tabuleiro-->
+        <div class="stage">
        <div class="linha">
            <div class="square" id="0"></div>
            <div class="square" id="1"></div>
@@ -25,6 +28,9 @@
             <div class="square" id="8"></div>
         </div>
     </div>
+    </div>
+   </main>
+   
     <script src="./script/game.js" ></script>
     <script src="./script/interface.js" ></script>
 </body>
