@@ -4,6 +4,7 @@ let jogadasFeitas = ["","","","","","","","",""]
 let jogadasTabuleiro = ["","","","","","","","",""]
 let jogada = 1
 let gameOver = false
+let evento = 
 document.addEventListener("DOMContentLoaded", () => {
     if (!gameOver){
         let celulas = document.querySelectorAll(".celula")
@@ -62,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 function ganhou(){
+    evento = ""
     gameOver = true
     setTimeout(()=> {
         alert(`Fim de Jogo. O JOGADOR ${simbolo[jogador]} VENCEU!`)
@@ -69,6 +71,8 @@ function ganhou(){
    
 }
 
+
+//Ainda não funciona
 function reset() {
     const divis = document.getElementsByClassName('celula')
     let contador = 0
