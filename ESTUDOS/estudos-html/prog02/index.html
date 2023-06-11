@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Layout Jogo de Tabuleiro</title>
+</head>
+<body>
+    <main>
+        <div class="tabuleiro">
+            <div class="celula" id="celula-1" onclick="jogar1()"></div>
+            <div class="celula" id="celula-2" onclick="jogar2()"></div>
+            <div class="celula" id="celula-3" onclick="jogar3()"></div>
+            <div class="celula" id="celula-4" onclick="jogar4()"></div>
+            <div class="celula" id="celula-5" onclick="jogar5()"></div>
+            <div class="celula" id="celula-6" onclick="jogar6()"></div>
+            <div class="celula" id="celula-7" onclick="jogar7()"></div>
+            <div class="celula" id="celula-8" onclick="jogar8()"></div>
+            <div class="celula" id="celula-9" onclick="jogar9()"></div>
+        </div>
+        <div class="info">
+            <h2>Vez do Jogador:</h2>
+            <h2 id="player">${player}</h2>
+        </div>
+    </main>
+    <script src="./script/script.js"></script>
+</body>
+</html>
