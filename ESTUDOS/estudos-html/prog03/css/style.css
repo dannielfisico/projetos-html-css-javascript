@@ -11,6 +11,15 @@ h1 {
 
 .stage {
     text-align: center;
+    margin: auto;
+    width: 350px;
+    height: 350px;
+}
+
+.linha {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    
 }
 
 .square {
@@ -20,3 +29,23 @@ h1 {
     border: 1px solid gray;
     display: inline-block;
 }
+
+.o {
+
+}
+
+.x:after {
+    content: "🛡️";
+    font-size: 50px;
+    line-height: 100px;
+    position: relative;
+    
+} 
+
+.o:after {
+    content: "✂️";
+    font-size: 50px;
+    line-height: 100px;
+    position: relative;
+    
+} 
