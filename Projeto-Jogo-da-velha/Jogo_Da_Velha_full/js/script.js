@@ -85,7 +85,7 @@ function handleClick(evento){
     btn.style.display = 'inline-block'
         setTimeout(()=>{
             alert(`O jogo acabou! | ${simbols[playerTime]} Venceu`)
-        }),10
+        },1000)
    }
     updateCelulas(position) //Servirá para atualizar o conteudo da celula
 }
@@ -114,3 +114,6 @@ document.getElementById('btn').addEventListener('click', resetar => {
 //#endregion
 
 
+setTimeout(() => {
+    
+}, timeout);
