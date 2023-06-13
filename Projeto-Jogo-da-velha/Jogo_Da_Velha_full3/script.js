@@ -1,6 +1,7 @@
 //#region #############-----GAME------#########
 const tabuleiro = ["","","","","","","","",""]
-const icones = ["🐶","🐱"]
+
+let icones = ['🐶', '🍇']
 let jogador = 0
 let gameOver = false
 let jogadasRealizadas = 0
@@ -41,6 +42,7 @@ function eCampeao(){
 
 //#region #############-----INTERFACE------#########
 document.addEventListener('DOMContentLoaded',()=>{
+    
     const celulas = document.querySelectorAll(".celula")
     celulas.forEach(celula => {
         celula.addEventListener("click", ondeClicou => {
@@ -89,8 +91,14 @@ document.addEventListener('DOMContentLoaded',()=>{
            } 
         })
     })
+
+    document.getElementById('btnIniciar').addEventListener('click', ()=>{
+        inicarJogo()
+    })
     
 })
+
+
 
 
 function empatou(){
@@ -103,6 +111,34 @@ function empatou(){
 function resetar(){
     setTimeout(()=>{
         document.location.reload()
+        
     },5000);
+}
+
+function inicarJogo(){
+    const tabuleiroCelulas = document.querySelector(".tabuleiro")
+    tabuleiroCelulas.style.display = 'flex'
+    const seletores = document.querySelector('.seletores')
+    seletores.style.display = 'none'
+
+    const avatarJogador1 = document.getElementsByName('animal')
+    const avatarJogador2 = document.getElementsByName('fruta')
+    console.log(avatarJogador1[0])
+    console.log(avatarJogador2[0])
+    if(avatarJogador1[0].checked){
+        icones[0] = "🐶"
+    } else if (avatarJogador1[1].checked){
+        icones[0] = "🐱"
+    } else {
+        icones[0] = "🐷"
+    }
+
+    if(avatarJogador2[0].checked){
+        icones[1] = "🍇"
+    } else if (avatarJogador2[1].checked){
+        icones[1] = "🍉"
+    } else {
+        icones[1] = "🍓"
+    }
 }
 //#endregion

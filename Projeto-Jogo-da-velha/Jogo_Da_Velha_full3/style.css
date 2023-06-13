@@ -10,8 +10,8 @@
     /* background-color: blue; */
     margin: auto;
     margin-top: 30px;
-    
-    display: flex;
+    display: none;
+    /* display: flex; */
     flex-wrap: wrap;
     gap: 2px;
     justify-content: center;
@@ -26,8 +26,8 @@
     font-size: 80px;
     font-weight: bold;
     text-transform: uppercase;
-    display: none;
-    /* display: flex; */
+    /* display: none; */
+    display: flex;
     align-items: center;
     justify-content: center;
     
@@ -40,6 +40,7 @@ p {
 
 .jogador, .jogadas {
     /* border: 1px solid red; */
+    margin: auto;
     width: 362px;
     padding: 10px;
     font-size: 20px;
@@ -49,6 +50,7 @@ p {
 
 .seletores {
     display: grid;
+    /* display: none; */
     
 }
 
