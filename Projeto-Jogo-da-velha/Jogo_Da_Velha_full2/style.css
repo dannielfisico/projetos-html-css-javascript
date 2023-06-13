@@ -31,3 +31,12 @@
     justify-content: center;
     
 }
+
+.jogador, .jogadas {
+    /* border: 1px solid red; */
+    width: 362px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}

@@ -3,6 +3,9 @@ const tabuleiro = ["","","","","","","","",""]
 const icones = ["🐶","🐱"]
 let jogador = 0
 let gameOver = false
+let jogadasRealizadas = 0
+let empate = false
+
 
 function eCampeao(){
     const estadoVitoria = [
@@ -49,18 +52,30 @@ document.addEventListener('DOMContentLoaded',()=>{
            console.log(ondeClicou.target)
 
            if(tabuleiro[celula] == ""){
+                jogadasRealizadas++
+                console.log(`Jogadas realizadas: ${jogadasRealizadas}`)
                tabuleiro[celula] = icones[jogador]
                console.log(tabuleiro)
                ondeClicou.target.innerHTML = icones[jogador]
+
+            const txtJogador = document.querySelector('.jogador')
+            const txtJogadas = document.querySelector('.jogadas')
+            txtJogador.innerHTML = `Última jogada foi do ${icones[jogador]}`
+            txtJogadas.innerHTML = `Quantidade de movimentos ${jogadasRealizadas}`
+
              gameOver = eCampeao()
              console.log(`Jogador atual ${icones[jogador]}`)
              if(gameOver){
                 setTimeout(()=>{
                     alert(`Fim de Jogo | Vencedor: ${icones[jogador]}`)
                 },10);
-                
+                txtJogador.innerHTML = `Fim de Jogo | Vencedor: ${icones[jogador]}`
                 resetar()
                 
+             }
+
+             if(empatou()){
+                txtJogador.innerHTML = `Empatou 🤣🤣🤣`
              }
              
 
@@ -77,6 +92,13 @@ document.addEventListener('DOMContentLoaded',()=>{
     
 })
 
+
+function empatou(){
+    if(jogadasRealizadas>8 && (!eCampeao())){
+        resetar()
+        return true
+    }
+}
 
 function resetar(){
     setTimeout(()=>{
