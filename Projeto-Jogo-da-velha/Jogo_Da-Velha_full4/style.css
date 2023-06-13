@@ -5,16 +5,18 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
 .container {
     max-width: 600px;
     height: 100vh;
     padding: 30PX;
     margin: auto;
-    background-color: beige;
+    background-color: cornsilk;
 }
 
 .icone1, .icone2 {
     display: inline-block;
+    
 }
 
 a {
@@ -42,7 +44,8 @@ a:hover {
 }
 
 .board {
-    display: grid;
+    /* display: grid; */
+    display: none;
     grid-template-columns: 100px 100px 100px;
     gap: 3px;
     justify-content: center;
@@ -54,5 +57,13 @@ a:hover {
     height: 100px;
     background-color: tomato;
     border: 1px solid #000;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    line-height: 100px;
+
 }
+
+
 
