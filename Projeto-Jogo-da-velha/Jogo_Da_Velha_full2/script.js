@@ -5,7 +5,8 @@ let jogador = 0
 let gameOver = false
 let jogadasRealizadas = 0
 let empate = false
-
+let audio = new Audio("./risada-muttley-rabugento.mp3")
+let audiodog = new Audio('/0000995.mp3')
 
 function eCampeao(){
     const estadoVitoria = [
@@ -95,6 +96,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 function empatou(){
     if(jogadasRealizadas>8 && (!eCampeao())){
+        audio.play()
         resetar()
         return true
     }

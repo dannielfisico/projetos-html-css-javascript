@@ -1,4 +1,4 @@
-const card = document.querySelector('#a7864621d')
+const card = document.querySelector('.card')
 let flipada = 0
 card.addEventListener('click', ()=> {
     if(flipada){

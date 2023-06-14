@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Righteous', sans-serif;
+}
+
+body {
+    /* position: relative; */
+}
+
+:root {
+    --cor1: #101c2c;
+    --cor2: #05c3ff;
+}
+
+
+.cabecalho {
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    background-color: rgb(106, 19, 146);
+}
+
+h1:hover {
+    transition: all .2s ease-in-out;
+    transform: scale(0.6);
+}
+
+/*######## CSS DOS ELEMENTOS DA CARTA #############*/
+.icon {
+    width: 110px;
+    height: 110px;
+    border-radius: 5px;
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card_back, .card_front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45);
+    backface-visibility: hidden;
+}
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.card_front {
+background-color: var(--cor1);
+transform: rotateY(180deg);
+
+}
+
+.card_back {
+background-color: var(--cor2);
+color: var(--cor1);
+font-size: 40px;
+/* display: none; */
+}
+
+/*######## TELA DE GAME OVER #############*/
+.gameOver {
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.856);
+    color: white;
+    font-size: 30px;
+    width: 100%;
+    height: 100%;
+    display: none; /*flex*/
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#restart {
+    margin-top: 15px;
+    padding: 20px;
+    font-size: 20px;
+    background-color: yellow;
+    border: none;
+    border-radius: 10px;
+}
+
+/*######## CSS DO GAME BOARD #############*/
+
+.gameBoard {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    max-width: 650px;
+    margin: auto;
+}
