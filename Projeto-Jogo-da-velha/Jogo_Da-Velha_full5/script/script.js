@@ -4,8 +4,16 @@ const simbolos = ["X", "O"]
 let idJogada = ""
 let jogadasRealizadas = 0
 let gameOver = false
+const txtVencedor = document.querySelector('.resultado')
+const btnJogarNovamente = document.querySelector('.btnJogarNovamente')
 
 document.addEventListener("DOMContentLoaded", ()=> {
+
+    btnJogarNovamente.addEventListener('click', () =>{
+        document.location.reload()
+    })
+
+
     const celulas = document.querySelectorAll(".celula")
     celulas.forEach(celula => {
         celula.addEventListener("click", ondeClicou => {
@@ -31,19 +39,21 @@ document.addEventListener("DOMContentLoaded", ()=> {
                
                 if(jogadasRealizadas >4){
                     gameOver = eCampeao()
-                    const txtVencedor = document.querySelector('.resultado')
-                    txtVencedor.innerHTML= `Vencedor: ${simbolos[jogadorAtual]}`
+                    if(gameOver){
+                        txtVencedor.innerHTML = `Vencedor: ${simbolos[jogadorAtual]}`
+                        btnJogarNovamente.style.display = "block"
+
+                    } 
                 }
 
-                
+                if(jogadasRealizadas == 9 && !eCampeao()){
+                    txtVencedor.innerHTML = `Empate`
+                    btnJogarNovamente.style.display = "block"
+
+                }
                
                 trocarDeJogador()
-               
-
-                
-               
-                
-                    
+                               
             }
 
         })

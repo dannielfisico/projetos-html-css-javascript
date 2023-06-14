@@ -40,6 +40,19 @@ header {
 
 .info {
     padding: 10px;
-    width: 280px;
+    width:300px;
     
+    
+}
+
+.btnJogarNovamente {
+    text-decoration: none;
+    background-color: black;
+    color: wheat;
+    padding: 2px;
+    display: none;
+    transition: .5s;
+
+    
+
 }
