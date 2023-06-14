@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", ()=> {
     const celulas = document.querySelectorAll(".celula")
     celulas.forEach(celula => {
         celula.addEventListener("click", ondeClicou => {
+            if(gameOver){
+                return
+            }
+
             console.log(ondeClicou.target.id)
             idJogada = ondeClicou.target.id
             if(jogadasFeitas[idJogada] == ""){
@@ -25,13 +29,16 @@ document.addEventListener("DOMContentLoaded", ()=> {
                 console.log(jogadasFeitas)
                 celula.innerHTML = `${simbolos[jogadorAtual]}`
                
-               if (jogadasRealizadas > 4){
-                 gameOver = eCampeao()
-                 const txtVenvedor = document.querySelector('.resultado')
-                 txtVenvedor.innerHTML = `Vencedor: ${jogadorAtual}`
-               } else {
+                if(jogadasRealizadas >4){
+                    gameOver = eCampeao()
+                    const txtVencedor = document.querySelector('.resultado')
+                    txtVencedor.innerHTML= `Vencedor: ${simbolos[jogadorAtual]}`
+                }
+
+                
+               
                 trocarDeJogador()
-               }
+               
 
                 
                
