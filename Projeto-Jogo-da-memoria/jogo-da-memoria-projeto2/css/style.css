@@ -1,20 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Righteous', sans-serif;
 }
 
-body {
-    /* position: relative; */
-}
-
 :root {
     --cor1: #101c2c;
     --cor2: #05c3ff;
+    --cor3: #c7cdd3;
 }
+
+body {
+    background-color: var(--cor3);
+    
+}
+
 
 
 .cabecalho {
@@ -26,7 +29,7 @@ body {
 
 h1:hover {
     transition: all .2s ease-in-out;
-    transform: scale(0.6);
+    transform: scale(0.9);
 }
 
 /*######## CSS DOS ELEMENTOS DA CARTA #############*/
@@ -44,7 +47,13 @@ h1:hover {
     transition: transform 0.5s;
 }
 
-.card_back, .card_front {
+.card:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.05);
+}
+
+.card_back,
+.card_front {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -61,16 +70,16 @@ h1:hover {
 }
 
 .card_front {
-background-color: var(--cor1);
-transform: rotateY(180deg);
+    background-color: var(--cor1);
+    transform: rotateY(180deg);
 
 }
 
 .card_back {
-background-color: var(--cor2);
-color: var(--cor1);
-font-size: 40px;
-/* display: none; */
+    background-color: var(--cor2);
+    color: var(--cor1);
+    font-size: 40px;
+    /* display: none; */
 }
 
 /*######## TELA DE GAME OVER #############*/
@@ -82,7 +91,8 @@ font-size: 40px;
     font-size: 30px;
     width: 100%;
     height: 100%;
-    display: none; /*flex*/
+    display: none;
+    /*flex*/
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -102,8 +112,8 @@ font-size: 40px;
 .gameBoard {
     padding: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
     gap: 15px;
-    max-width: 650px;
+    max-width: 700px;
     margin: auto;
 }
