@@ -108,14 +108,24 @@ function startGame(){
 
                         ondeClicou.target.innerHTML = simbolos[jogadorDaVez]
                         jogadasFeitas[ondeClicou.target.id] = simbolos[jogadorDaVez]
-                        eCampeao()   
-                    }
-
-                    if(!eCampeao()){
+                        eCampeao()
+                             if(!eCampeao()){
                         passarJogada()
                     }
                     
+                    }
+
+                  
                     gameOver = eCampeao()
+
+                    if(qtdJogadas > 8 && !gameOver) {
+                        document.querySelector('.resultado').innerHTML = `EMPATE`
+                        document.querySelector('.hidden').style.display = "block"
+                        document.querySelector('.hidden').addEventListener("click", ()=>{
+                            document.location.reload()})
+                        
+                    }
+
 
                     if(gameOver){
                         document.querySelector('.resultado').innerHTML = `${simbolos[jogadorDaVez]} VENCEU.`
@@ -123,7 +133,7 @@ function startGame(){
                         document.querySelector('.hidden').addEventListener("click", ()=>{
                             document.location.reload()
                         })
-
+                  
                     }
                 })
             })
@@ -134,6 +144,7 @@ function startGame(){
     
  
 }
+
 
 
 function passarJogada(){

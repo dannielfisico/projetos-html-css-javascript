@@ -80,6 +80,10 @@ a:hover {
 
 }
 
+h4{
+    text-align: center;
+}
+
 .info {
     display: none;
 }
