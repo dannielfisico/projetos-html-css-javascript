@@ -5,13 +5,28 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+:root {
+    --cor1: #bb1e1e;
+}
+
+body {
+    background-color: var(--cor1);
+    color: #eee;
+}
+
+header {
+    text-align: center;
+    padding-top: 20px;
+    background-color: var(--cor1);
+}
+
 
 .container {
     max-width: 600px;
     height: 100vh;
     padding: 30PX;
     margin: auto;
-    background-color: cornsilk;
+    background-color: var(--cor1);
 }
 
 .icone1, .icone2 {
@@ -65,5 +80,15 @@ a:hover {
 
 }
 
+.info {
+    display: none;
+}
 
+.resultado {
+    font-size: 40px;
+}
+
+.hidden {
+    display: none;
+}
 
