@@ -18,7 +18,7 @@ document.getElementById('btnBuscar').onclick = () => {
     }).then( (dadosDaRespostaJSON) => {
         console.log(dadosDaRespostaJSON) //imprime o objeto json
         let localização //variável definida para receber a localização do usuário
-            if(dadosDaRespostaJSON.location === null){
+            if(dadosDaRespostaJSON.location === null || dadosDaRespostaJSON.location === "undefined" || dadosDaRespostaJSON.location === "null"){
                 local = 'algum lugar não definido.'
             } else {
                 localização = dadosDaRespostaJSON.location
