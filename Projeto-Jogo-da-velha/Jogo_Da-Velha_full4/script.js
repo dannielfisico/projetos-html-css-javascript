@@ -28,14 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
         for(let d = 0; d < avatares2txt.length; d++){
             avatarPlayer2txt[d] = avatares2txt[d].innerHTML
         }
-    })
-    
+    }) 
 })
 
-
 function jogar(){
-
-    const board = document.querySelector(".board") //seleciona o tabuleiro
+     const board = document.querySelector(".board") //seleciona o tabuleiro
     board.style.display = "grid"    //exibe o tabuleiro colocando do diplay em grid
     const formulario = document.querySelector('.formulario') //seleciona o formulario 
     formulario.style.display = "none" //oculta o fomulario
@@ -46,11 +43,9 @@ function jogar(){
             if(avatares1rad[a].checked){
                 avatarPlayer1 = a
            }
-        
         }
     })
 
-    
     avatares2rad.forEach(avatar2 => {
         for(var b = 0; b < avatares2rad.length; b++){
            if(avatares2rad[b].checked){
@@ -61,8 +56,6 @@ function jogar(){
 
     iconesSelecionados[0] = avatarPlayer1
     iconesSelecionados[1] = avatarPlayer2
-
-    
     simbolos[0] = avatarPlayer1txt[iconesSelecionados[0]]
     simbolos[1] = avatarPlayer2txt[iconesSelecionados[1]]
     document.querySelector("#avatar1").innerHTML = `${simbolos[0]}`
@@ -70,11 +63,6 @@ function jogar(){
     
     /* ############## GAME #######################*/
     //Após o usuário selecionar os avatares dos players e clicar no botão jogar, será dado inico ao jogo
-
-    
-
-
-    
     //log
     console.log(`Avatar P1: ${avatarPlayer1}`)
     console.log(`Avatar P2: ${avatarPlayer2}`)
@@ -88,7 +76,6 @@ function jogar(){
     startGame()
     
 }
-
 
 function startGame(){
     
@@ -112,10 +99,7 @@ function startGame(){
                              if(!eCampeao()){
                         passarJogada()
                     }
-                    
                     }
-
-                  
                     gameOver = eCampeao()
 
                     if(qtdJogadas > 8 && !gameOver) {
@@ -125,15 +109,12 @@ function startGame(){
                             document.location.reload()})
                         
                     }
-
-
                     if(gameOver){
                         document.querySelector('.resultado').innerHTML = `${simbolos[jogadorDaVez]} VENCEU.`
                         document.querySelector('.hidden').style.display = "block"
                         document.querySelector('.hidden').addEventListener("click", ()=>{
                             document.location.reload()
                         })
-                  
                     }
                 })
             })
@@ -141,11 +122,7 @@ function startGame(){
     } else {
         console.log(`O jogo não começou`)
     }
-    
- 
 }
-
-
 
 function passarJogada(){
     if(jogadorDaVez == 0){
@@ -157,7 +134,6 @@ function passarJogada(){
         qtdJogadas++
         // tabuleiroPreenchido()
     }
-    
 }
 
 function tabuleiroPreenchido(){

@@ -5,6 +5,7 @@ const board = ["", "", "", "", "","", "", "", ""] //representa as 9 posições d
 const simbols = ["🛡️", "🎸"]
 let playerTime = 0
 let gameOver = false
+let houveEmpate = false
 
 function handleMove(position){
             //Se a variavel gameOver for verdadeira a função retorna e encerra o handMove aqui!
@@ -19,8 +20,10 @@ function handleMove(position){
 
 
                 gameOver = isWin()
+                houveEmpate = empate()
+           
                
-            if(gameOver == false){ //Só passa pro proximo jogador se o gameOver for falso
+            if(!gameOver){ //Só passa pro proximo jogador se o gameOver for falso
                 if(playerTime == 0){
                     playerTime = 1
                 } else {
@@ -60,6 +63,12 @@ function isWin(){
     return false //Esta função sempre retorna false, a menos que a verificação acima seja verdadeira
 }
 
+function empate(){
+    if(!gameOver && board.indexOf("") == -1){
+        return true
+    }
+}
+
 //#endregion
 /************************************************************************************************************/
                         //#region ########### INTERFACE JS ##############
@@ -70,13 +79,16 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
         celulas.forEach((celula)=> {
             celula.addEventListener('click', handleClick)
+             
         })
+   
 
 })
 
 //Criar função handleClick (Fora do escopo DOMContentLoaded)
 
 function handleClick(evento){
+  
     // console.log(evento.target)
     let position = evento.target.id
     // console.log(position)
@@ -93,6 +105,12 @@ function handleClick(evento){
 
 //Função para atualizar a celula clicada
 function updateCelulas(){
+    if(houveEmpate){
+        setTimeout(() => {
+            alert(`Houve Empate`) 
+        },10);
+        document.getElementById('btn').style.display = 'inline-block'
+    }
     let celulas = document.querySelectorAll('.celula')
     
     celulas.forEach(celula =>{
@@ -113,7 +131,3 @@ document.getElementById('btn').addEventListener('click', resetar => {
 
 //#endregion
 
-
-setTimeout(() => {
-    
-}, timeout);

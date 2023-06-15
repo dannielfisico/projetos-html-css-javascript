@@ -64,7 +64,7 @@ a:hover {
     grid-template-columns: 100px 100px 100px;
     gap: 3px;
     justify-content: center;
-    padding: 25px;
+    padding: 0px;
 }
 
 .celula {
@@ -89,7 +89,7 @@ h4{
 }
 
 .resultado {
-    font-size: 40px;
+    font-size: 20px;
 }
 
 .hidden {
