@@ -12,7 +12,7 @@
     margin: auto;
     /* background-color: aquamarine; */
     background: linear-gradient(to right, rgb(0, 0, 255), rgb(0, 0, 0));
-    padding: 15px;
+    padding: 25px;
 }
 
 .main-form {
@@ -45,6 +45,8 @@ textarea {
     color: #eee;
     border: none;
 }
+
+
 
 footer {
     background-color: blue;
@@ -83,7 +85,29 @@ header {
 
 .absolute{
     position: absolute;
-    bottom: 0;
+    left: calc(50% - 150px);
+    top: calc(50% - 150px);
+    
+}
+
+.tabuleiro {
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    align-items: center; /* Alinhamento Vertical */
+    /* justify-content: center; */
+    justify-items: center;
+    
+}
+
+.celula {
+    width: 90px;
+    height: 90px;
+    background-color: violet;
+    border: 1px solid #fff;
+
 }
 
 #main-navbar {
@@ -99,10 +123,19 @@ top: 0;
 .btnWhatsapp{
     width: 90px;
     height: 90px;
-    
+    display: none;
     background-image: url("./image/whatsapp.png");
     background-size: cover;
     position: fixed;
-    bottom: 25px;
-    right: 10px;
+    bottom: 0px;
+    right: 0px;
+    margin: 20px;
+    transition: .5s;
+    
+    
+}
+
+.btnWhatsapp:hover {
+    transform: scale(1.1);
+    transition: all .5s;
 }
