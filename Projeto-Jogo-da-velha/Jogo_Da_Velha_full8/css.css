@@ -10,6 +10,10 @@
     --banner-color: linear-gradient(90deg, rgba(230,230,230,1) 0%, rgba(236,236,236,1) 100%);
 }
 
+body{
+    position: relative;
+}
+
 
 
 .box {
@@ -98,7 +102,7 @@ header {
 .tabuleiro {
     width: 300px;
     height: 300px;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
     display: grid;
     grid-template-columns: 100px 100px 100px;
     align-items: center; /* Alinhamento Vertical */
@@ -112,6 +116,12 @@ header {
     height: 90px;
     border: 1px solid #fff;
     background-color: rgb(94, 33, 143);
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+   justify-content: center;  /* Alinhamento: HORIZONTAL*/
+    align-items: center; /* Alinhamento: HORIZONTAL*/
 }
 
 #main-navbar {
@@ -142,4 +152,35 @@ top: 0;
 .btnWhatsapp:hover {
     transform: scale(1.1);
     transition: all .5s;
+}
+
+.telaResultado {
+    background-color: rgba(0, 0, 0, 0.842);
+    color: white;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: none; /*flex*/
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.telaResultado button {
+    padding: 10px;
+    margin-top: 8px;
+    background-color: yellow;
+    border: none;
+    transition: .5s;
+}
+
+.telaResultado button:hover {
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.telaResultado h1 {
+    color: red;
 }
