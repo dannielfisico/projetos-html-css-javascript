@@ -11,8 +11,6 @@ const tabuleiro = ["","","", "","","", "","",""]
 let jogadorAtual = 0
 const simbolos = ["X", "O"]
 
-
-
 const celulas = document.querySelectorAll(".celula")
 
 celulas.forEach(celula => {
@@ -78,3 +76,6 @@ function eEmpate(){
     
 }
 
+
+    document.querySelector("button").addEventListener("click", ()=>{
+        document.location.reload()}, {once: true})
