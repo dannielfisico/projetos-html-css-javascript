@@ -125,6 +125,7 @@ header {
     display: flex;
    justify-content: center;  /* Alinhamento: HORIZONTAL*/
     align-items: center; /* Alinhamento: HORIZONTAL*/
+    
 }
 
 #main-navbar {
@@ -168,6 +169,7 @@ top: 0;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    
 
 }
 
@@ -182,6 +184,7 @@ top: 0;
 .telaResultado button:hover {
     transform: scale(1.1);
     transition: .5s;
+    
 }
 
 .telaResultado h1 {
