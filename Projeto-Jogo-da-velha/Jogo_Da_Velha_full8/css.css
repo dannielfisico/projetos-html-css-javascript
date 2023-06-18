@@ -115,16 +115,18 @@ header {
 }
 
 .celula {
-    width: 90px;
-    height: 90px;
+    width: 45px;
+    height: 45px;
     border: 1px solid #fff;
     background-color: rgb(94, 33, 143);
-    font-size: 50px;
+    font-size: 25px;
     font-weight: bold;
     color: white;
     display: flex;
-   justify-content: center;  /* Alinhamento: HORIZONTAL*/
+    justify-content: center;  /* Alinhamento: HORIZONTAL*/
     align-items: center; /* Alinhamento: HORIZONTAL*/
+    transition: all 1.9s ease-in;
+    transform: scale(2);
     
 }
 
