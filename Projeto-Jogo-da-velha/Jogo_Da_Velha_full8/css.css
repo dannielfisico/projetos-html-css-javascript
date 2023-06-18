@@ -108,6 +108,9 @@ header {
     align-items: center; /* Alinhamento Vertical */
     /* justify-content: center; */
     justify-items: center;
+    position: absolute;
+    left: 0px;
+    transition: .5s;
     
 }
 

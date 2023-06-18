@@ -28,7 +28,7 @@ function clicou(celula){
         document.querySelector(".telaResultado h1").innerHTML = `${simbolos[jogadorAtual]} Venceu!`
     }
     eEmpate()
-    console.log(qtdJogadas)
+    
 }
 
 function trocarJogador(){
@@ -60,6 +60,9 @@ function eCampeao(){
         let posicao2 = sequencia[2]
 
         if (tabuleiro[posicao0] == tabuleiro[posicao1] && tabuleiro[posicao0] == tabuleiro[posicao2] && tabuleiro[posicao0] != ""){
+            let celula0 = document.getElementById(posicao0).setAttribute('style', "background-color: red")
+            let celula1 = document.getElementById(posicao1).setAttribute('style', "background-color: red")
+            let celula2 = document.getElementById(posicao2).setAttribute('style', "background-color: red")
             return true
         }
     }
@@ -70,6 +73,7 @@ function eEmpate(){
     if(!eCampeao() && tabuleiro.indexOf('') == -1){
         document.querySelector(".telaResultado").style.display = 'flex'
         document.querySelector(".telaResultado h1").innerHTML = `EMPATE!`
+        document.querySelector(".tabuleiro").style.left = `300px`
         
     }
 
