@@ -9,7 +9,7 @@ mostarbtnWhatsapp()
 /*################### VARIAVEIS #######################*/
 const tabuleiro = ["","","", "","","", "","",""]
 let jogadorAtual = 0
-const simbolos = ["X", "O"]
+const simbolos = ["🛡️", "⚔️"]
 
 const celulas = document.querySelectorAll(".celula")
 
