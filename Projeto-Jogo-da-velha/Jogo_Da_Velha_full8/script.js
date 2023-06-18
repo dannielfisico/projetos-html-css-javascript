@@ -63,6 +63,7 @@ function eCampeao(){
             let celula0 = document.getElementById(posicao0).setAttribute('style', "background-color: red")
             let celula1 = document.getElementById(posicao1).setAttribute('style', "background-color: red")
             let celula2 = document.getElementById(posicao2).setAttribute('style', "background-color: red")
+            document.querySelector(".tabuleiro").style.left = `300px`
             return true
         }
     }

@@ -110,7 +110,7 @@ header {
     justify-items: center;
     position: absolute;
     left: 0px;
-    transition: .5s;
+    transition: 1s;
     
 }
 
@@ -158,7 +158,7 @@ top: 0;
 }
 
 .telaResultado {
-    background-color: rgba(0, 0, 0, 0.842);
+    background-color: rgba(0, 0, 0, 0.829);
     color: white;
     position: absolute;
     top: 0;
@@ -185,5 +185,5 @@ top: 0;
 }
 
 .telaResultado h1 {
-    color: red;
+    color: rgb(255, 255, 255);
 }
