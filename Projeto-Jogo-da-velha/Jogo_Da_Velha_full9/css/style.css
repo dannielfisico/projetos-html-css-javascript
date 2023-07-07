@@ -21,14 +21,13 @@ body {
     margin-bottom: 15px;
     width: 100%;
     max-width: 550px;
-    margin: 0 auto 15px;
+    border-radius: 10px;
+    margin: 10px auto 15px;
     padding: 10px 40px;
     font-size: 1.5em;
     display: grid;
     grid-template: 1fr 1fr / 1fr 1fr;
-    /* justify-content: center; */
-    align-items: center;
-    align-content: center;
+   user-select: none;
 }
 
 #tempo {
@@ -43,6 +42,7 @@ body {
     height: 550px;
     background-color: var(--cor2);
     margin: auto;
+    border-radius: 10px;
     padding: 8px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -51,6 +51,8 @@ body {
 
 .celula {
     background-color: var(--cor4);
+    user-select: none;
+    cursor: pointer;
 }
 
 .celula:hover {
