@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor1: #136351;
+    --cor2: #71E8CC;
+    --cor3: #2BE3B8;
+    --cor4: #5A6764;
+    --cor5: #21B08F;
+}
+
+body {
+    background-color: var(--cor1);
+}
+
+.board {
+    width: 100%;
+    max-width: 600px;
+    height: 600px;
+    background-color: var(--cor2);
+    margin: auto;
+    padding: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+}
+
+.celula {
+    background-color: var(--cor4);
+}
+
+.celula:hover {
+    box-shadow: 0 0 3px 3px #21B08F ;
+}
