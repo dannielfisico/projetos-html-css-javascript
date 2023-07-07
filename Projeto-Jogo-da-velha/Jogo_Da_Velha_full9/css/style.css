@@ -16,10 +16,17 @@ body {
     background-color: var(--cor1);
 }
 
+.info {
+    background-color: var(--cor2);
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto 15px;
+}
 .board {
     width: 100%;
-    max-width: 600px;
-    height: 600px;
+    max-width: 550px;
+    height: 550px;
     background-color: var(--cor2);
     margin: auto;
     padding: 8px;
