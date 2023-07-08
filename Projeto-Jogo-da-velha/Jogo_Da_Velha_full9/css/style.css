@@ -40,7 +40,7 @@ body {
     width: 100%;
     max-width: 550px;
     height: 550px;
-    background-color: var(--cor2);
+    /* background-color: var(--cor2); */
     margin: auto;
     border-radius: 10px;
     /* padding: 8px; */
