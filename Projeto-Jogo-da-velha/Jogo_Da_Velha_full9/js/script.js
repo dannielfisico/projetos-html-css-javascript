@@ -4,5 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const simbolos = ["❌","⭕"]
     let jogadorAtual = 0
 
-    
+    const celulas = document.querySelectorAll('.celula')
+    celulas.addEventListener('click', fazerJogada, {once: true})
+
+    function fazerJogada(){
+        celulas.target
+    }
 })
