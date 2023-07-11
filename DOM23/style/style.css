@@ -11,9 +11,28 @@ main {
     margin: 50px auto;
     padding: 25px;
     color: white;
+    display: flex;
 }
+
+form {
+    width: 40%;
+    padding: 10px;
+
+}
+
+form input {
+    width: 100%;
+    margin-bottom: 3px;
+    padding: 3px;
+}
+
 
 .listagem {
     width: 60%;
-    background-color: brown;
-} 
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+}

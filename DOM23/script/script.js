@@ -4,8 +4,13 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     function salvarAluno(e){
         const aluno = document.querySelector('#aluno')
-        console.log(aluno) 
+        if(aluno.value.length >=3){
+            console.log(aluno.value) 
         e.preventDefault()
+        aluno.value = ""
+        }
+
+        
     }
-    btnSalvar.addEventListener('click', salvarAluno,  )
+    btnSalvar.addEventListener('click', salvarAluno)
 })
