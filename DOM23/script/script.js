@@ -3,8 +3,6 @@ document.addEventListener('DOMContentLoaded',()=>{
     const nomeAlunos = []
     const lista = document.querySelector('.lista')
 
-
-
         for(i = 0; i < localStorage.length; i++){
             nomeAlunos[i] = localStorage.getItem(`Aluno${i+1}`)
             lista.innerHTML += `<li>${i+1}.${nomeAlunos[i]}</li> `
@@ -15,19 +13,35 @@ document.addEventListener('DOMContentLoaded',()=>{
     const totalAlunos = document.querySelector('#total')
     totalAlunos.innerHTML = localStorage.length
     console.log(localStorage.length)
-    const texto = document.querySelector('#aluno')
-    texto.addEventListener('input', () => {
-        let situation = true
-        if(texto.value.length >=3 && texto.value.trim() != ""){
-            situation = false
-            btnSalvar.disabled = situation
-            situation = true
-        } else {
-            btnSalvar.disabled = situation
+    let texto = document.querySelector('#aluno')
+        if(localStorage.length < 30){
+            texto.removeAttribute('disabled')
         }
+    // texto.addEventListener('input', () => {
+    //     let situation = true
+    //     if(texto.value.length >=3 && texto.value.trim() != ""){
+    //         situation = false
+    //         btnSalvar.disabled = situation
+    //         situation = true
+    //     } else {
+    //         btnSalvar.disabled = situation
+    //     }
         
-    })
+    // })
+    texto.onkeyup = () =>{
+        texto.value = texto.value.toUpperCase()
+        let situcao = true
+        if(texto.value.length >=3){
+            situcao = false
+            btnSalvar.disabled = situcao
+            situcao = true
+        } else {
+            btnSalvar.disabled = situcao
+        }
+    }
+   
     
+   
     
 
     function salvarAluno(e){
@@ -37,6 +51,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             if(localStorage.length >=30){
                 alert('O máximo de alunos nessa turma é 30')
                 aluno.value = ""
+                texto.toggleAttribute('disabled')
                 return
             }
             // console.log(aluno.value)
@@ -53,11 +68,19 @@ document.addEventListener('DOMContentLoaded',()=>{
             e.preventDefault()
             totalAlunos.innerHTML = localStorage.length
             aluno.value = ""
+            aluno.focus()
         }
-        aluno.focus()
+        
         
     }
     btnSalvar.addEventListener('click', salvarAluno)
+    texto.addEventListener('keypress', function(evento){
+        if(evento.key === 'Enter'){
+            evento.preventDefault()
+            btnSalvar.click()
+            
+        }
+    })
 
     
 })
