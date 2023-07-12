@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded',()=>{
     let posicao = localStorage.length
+    const maximo = 5
     const nomeAlunos = []
     const lista = document.querySelector('.lista')
 
@@ -48,10 +49,11 @@ document.addEventListener('DOMContentLoaded',()=>{
         const aluno = document.querySelector('#aluno')
         if(aluno.value.length >=3){
             
-            if(localStorage.length >=30){
-                alert('O máximo de alunos nessa turma é 30')
+            if(localStorage.length >=`${maximo}`){
+                alert(`O máximo de alunos nessa turma é ${maximo}`)
                 aluno.value = ""
                 texto.toggleAttribute('disabled')
+                btnSalvar.toggleAttribute('disabled')
                 return
             }
             // console.log(aluno.value)
