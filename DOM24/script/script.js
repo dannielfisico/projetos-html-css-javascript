@@ -4,19 +4,27 @@ document.addEventListener('DOMContentLoaded',() => {
     const btnApagar = document.querySelector('.apagar')
     const info = document.querySelector('.info')
     let contador = localStorage.getItem('Contador') ?? 0
+    const pessoas = []
     const lixeira = "🗑️"
     const lapis = "📝"
-    const divCliente = document.createElement('div')
-    divCliente.setAttribute('class', 'cliente')
-    info.appendChild(divCliente)
+    
 
     btnSalvar.setAttribute('disabled', true)
-    
-    for(let i = 1; i <= contador; i++){
-        const pessoa = document.createElement('p')
-        pessoa.innerHTML = localStorage(`Nome${i}`)
+
+    for(let i = 0; i <= contador; i++){
+        const divCliente = document.createElement('div')
+        divCliente.setAttribute('class', 'cliente')
+        info.appendChild(divCliente)
+        let pessoa = document.createElement('p')
+        pessoa.innerHTML = localStorage.getItem(`Nomed[i]`)
         divCliente.appendChild(pessoa)
     }
+    
+    // if(contador >0){
+        
+        
+    // }
+    
 
 
     
