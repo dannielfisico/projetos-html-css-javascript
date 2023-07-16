@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    p
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -11,14 +15,27 @@ body {
 
 header {
     width: 100%;
-    height: 5vh;
+    height: 10vh;
     background-color: red;
+    padding: 5px;
 
+}
+
+nav {
+    background-color: brown;
+}
+
+nav a {
+    background-color: aliceblue;
+    text-decoration: none;
+    padding: 8px;
+    margin: 10px 15px;
+    border-radius: 5px;
 }
 
 main {
     width: 100%;
-    height: 90vh;
+    height: 85vh;
     background-color: black;
 }
 
