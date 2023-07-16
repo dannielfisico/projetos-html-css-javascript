@@ -3,3 +3,23 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    display: flex;
+}
+
+header { 
+    height: 10vh;
+    background-color: red;
+
+}
+
+main {
+    height: 90vh;
+    background-color: black;
+}
+
+footer {
+    height: 10vh;
+    background-color: aqua;
+}
