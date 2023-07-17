@@ -18,18 +18,18 @@ header {
     height: 10vh;
     background-color: red;
     padding: 5px;
+    
 
 }
 
 nav {
     background-color: brown;
+    height: 15px;
 }
 
 nav a {
     background-color: aliceblue;
     text-decoration: none;
-    padding: 8px;
-    margin: 10px 15px;
     border-radius: 5px;
 }
 
@@ -37,6 +37,36 @@ main {
     width: 100%;
     height: 85vh;
     background-color: black;
+}
+
+.container{
+    width: 800px;
+    height: 160px;
+    background-color: rgb(127, 195, 255);
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.resp{
+    width: 800px;
+    height: 500px;
+    background-color: rgb(127, 195, 255);
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+input {
+    margin-bottom: 8px;
+    padding: 5px;
+    border: none;
+    box-shadow: 0 0 3px rgba(4, 0, 0, 0.678);
 }
 
 footer {
