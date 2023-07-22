@@ -4,3 +4,59 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+body {
+    position:relative;
+}
+
+.oculto {
+    display: none;
+}
+
+.container {
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+    background-color: #5f5e5e;
+}
+
+.modal {
+    background-color: #333;
+    color: aliceblue;
+    /* padding: 10px; */
+    width: 40%;
+    height: 200px;
+    top: calc(35vh);
+    bottom: 0;
+    left: 30%;
+    right: 0;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.758);
+    position: absolute;
+    overflow: hidden;
+    
+}
+
+.modal  h2 {
+    padding: 10px;
+    background-color: red;
+    margin-bottom: 8px;
+}
+
+.dados {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+   margin: auto;
+}
+
+.dados > input {
+    margin-bottom: 5px;
+    padding: 4px;
+
+}
+
+.btn {
+    width: 100px;
+}

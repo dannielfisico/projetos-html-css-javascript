@@ -8,9 +8,21 @@
     <title>Modal</title>
 </head>
 <body>
-    <div class="modal">
+    <div class="container">
+
+        <button  class="btnExibir">Cadastrar Cliente</button>
+    </div>
+
+    <div id="modal"  class="modal">
         <div class="modal-header">
-            <h2>Título do Modal</h2>
+            <h2>Informe os dados do Novo Cliente</h2>
+            <form class="dados">
+                <input id="nome" type="text" minlength="3" placeholder="Nome" required>
+                <input id="email" type="email" placeholder="E-mail" required>
+                <input id="profissao" type="text" placeholder="Profissão" required>
+                <input type="submit" class="btnSalvar" value="Salvar">
+            </form>
+            
         </div>
     </div>
 </body>
