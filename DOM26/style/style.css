@@ -17,12 +17,40 @@ body {
     width: 80%;
     height: 100vh;
     margin: auto;
-    background-color: #5f5e5e;
+    background-color: #333;
 }
 
 .container-header {
     background-color: red;
     padding: 30px;
+}
+
+.main {
+    width: 95%;
+    height: 100%;
+    background-color: antiquewhite;
+    margin: auto;
+}
+
+#campos, .cliente {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-bottom: 5px;
+    border-bottom: 1px solid black;
+    padding: 2px;
+    justify-content: space-around;
+}
+
+.titulos {
+    background-color: #333;
+    color: aliceblue;
+    font-weight: bold;
+    padding: 10px;
+    border-left: 4px solid red;
+    border-right: 4px solid red;
+    border-bottom: 6px solid red;
+    
+
 }
 
 .modal {

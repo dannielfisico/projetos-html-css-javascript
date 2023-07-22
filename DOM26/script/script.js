@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnExibir = document.querySelector('.btnExibir')
     const btnSalvar = document.querySelector('.btnSalvar')
     const btnFechar = document.querySelector('#btnFechar')
+    const divInfo = document.querySelector('.info')
 
     let pessoa = {
         nome,
@@ -20,6 +21,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const getLocalStorage = () => JSON.parse(localStorage.getItem('dbBanco') )?? []
     const setLocalStorage = (banco) => localStorage.setItem('dbBanco', JSON.stringify(banco))
  
+    const preencher = () => {
+        divInfo.innerHTML = ""
+        const dados = getLocalStorage()
+        console.log(dados)
+        dados.forEach(dado => {
+            const divClient = document.createElement('div')
+            divClient.setAttribute('class','cliente')
+            divClient.innerHTML = `<div>${dado.nome}</div>
+            <div>${dado.email}</div>
+              <div>${dado.profissao}</div>
+              <div><button>Editar</button><button>Excluir</button></div>`
+        divInfo.appendChild(divClient)
+        })
+    }
+    
+preencher()
 
     btnSalvar.addEventListener('click', (e) => {
         e.preventDefault()
@@ -57,6 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(pessoa)
 
         limparCampos()
+
+        preencher()
 
     }
     
