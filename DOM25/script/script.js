@@ -42,6 +42,15 @@ const isValidFields = () => {
 }
 
 //Interação com o Layout
+
+const clearFields = () => {
+//    const inputs = ['nome', 'email','celular','cidade']
+//     inputs.forEach((elemento)=> {
+//         document.getElementById(elemento).value = ""
+//     })
+    const fields = document.querySelectorAll('.modal-field')
+    fields.forEach(field => field.value = "")
+}
 const saveClient = () => {
     if (isValidFields()){
         const client = {
@@ -51,10 +60,9 @@ const saveClient = () => {
             cidade: document.getElementById('cidade').value
         }
         createClient(client)
-        document.getElementById('nome').value = ""
-        document.getElementById('email').value = ""
-        document.getElementById('celular').value = ""
-        document.getElementById('cidade').value = ""
+        clearFields()
+        closeModal()
+       
         console.log('Cadastrando cliente....')
     } else {
         console.log('Preencha todos os campos antes de salvar....')
