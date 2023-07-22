@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-    const getLocalStorage = () => JSON.parse(localStorage.getItem('banco') )?? []
-     
+    const getLocalStorage = () => JSON.parse(localStorage.getItem('dbBanco') )?? []
+    const setLocalStorage = (banco) => localStorage.setItem('dbBanco', JSON.stringify(banco))
  
 
     btnSalvar.addEventListener('click', (e) => {
@@ -42,6 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
         pessoa.email = email
         pessoa.profissao = profissao
 
+        const banco = getLocalStorage()
+        banco.push(pessoa)
+
+        // localStorage.setItem('dbBanco', JSON.stringify(banco))
+        setLocalStorage(banco)
 
         console.log(pessoa)
 
