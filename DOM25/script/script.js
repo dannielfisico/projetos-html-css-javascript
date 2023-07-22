@@ -19,7 +19,7 @@ const setLocalStorage = (dbClient) => localStorage.setItem('dbClient', JSON.stri
 //CRUD -    CREATE - READ - UPDATE - DELETE
 const createClient = (client) => {
     const dbClient = getLocalStorage()
-    dbClient.push(tempClient)
+    dbClient.push(client)
     setLocalStorage(dbClient)
 }
 // READ
@@ -37,6 +37,30 @@ const deleteClient = (index) => {
     setLocalStorage(dbClient)
 }
 
+const isValidFields = () => {
+  return document.getElementById('form').reportValidity()
+}
+
+//Interação com o Layout
+const saveClient = () => {
+    if (isValidFields()){
+        const client = {
+            nome: document.getElementById('nome').value,
+            email: document.getElementById('email').value,
+            celular: document.getElementById('celular').value,
+            cidade: document.getElementById('cidade').value
+        }
+        createClient(client)
+        document.getElementById('nome').value = ""
+        document.getElementById('email').value = ""
+        document.getElementById('celular').value = ""
+        document.getElementById('cidade').value = ""
+        console.log('Cadastrando cliente....')
+    } else {
+        console.log('Preencha todos os campos antes de salvar....')
+    }
+}
+
 
 // Eventos
 document.getElementById('cadastrarCliente')
@@ -45,8 +69,8 @@ document.getElementById('cadastrarCliente')
 document.getElementById('modalClose')
     .addEventListener('click', closeModal)
 
-// document.getElementById('salvar')
-//     .addEventListener('click', saveClient)
+document.getElementById('salvar')
+    .addEventListener('click', saveClient)
 
 // document.querySelector('#tableClient>tbody')
 //     .addEventListener('click', editDelete)
