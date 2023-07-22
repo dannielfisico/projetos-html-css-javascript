@@ -15,9 +15,14 @@ body {
 
 .container {
     width: 80%;
-    height: 80vh;
+    height: 100vh;
     margin: auto;
     background-color: #5f5e5e;
+}
+
+.container-header {
+    background-color: red;
+    padding: 30px;
 }
 
 .modal {
@@ -38,10 +43,23 @@ body {
     
 }
 
-.modal  h2 {
+.modal-header {
     padding: 10px;
     background-color: red;
     margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+}
+
+#btnFechar {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: aliceblue;
+    background-color: #333;
+    padding: 3px;
+    border-radius: 5px;
+    user-select: none;
 }
 
 .dados {

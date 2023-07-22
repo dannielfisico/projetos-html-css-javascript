@@ -9,21 +9,23 @@
 </head>
 <body>
     <div class="container">
+        <div class="container-header">
+            <button  class="btnExibir">Cadastrar Cliente</button>
 
-        <button  class="btnExibir">Cadastrar Cliente</button>
+        </div>
     </div>
 
     <div id="modal"  class="modal">
         <div class="modal-header">
             <h2>Informe os dados do Novo Cliente</h2>
-            <form class="dados">
-                <input class="campo" id="nome" type="text" minlength="3" placeholder="Nome" required>
-                <input class="campo" id="email" type="email" placeholder="E-mail" required>
-                <input class="campo" id="profissao" type="text" placeholder="Profissão" required>
-                <input type="submit" class="btnSalvar" value="Salvar">
-            </form>
-            
+            <a id="btnFechar" href="#">X</a>
         </div>
+        <form class="dados">
+            <input class="campo" id="nome" type="text" minlength="3" placeholder="Nome" required>
+            <input class="campo" id="email" type="email" placeholder="E-mail" required>
+            <input class="campo" id="profissao" type="text" placeholder="Profissão" required>
+            <input type="submit" class="btnSalvar" value="Salvar">
+        </form>
     </div>
 </body>
 </html>

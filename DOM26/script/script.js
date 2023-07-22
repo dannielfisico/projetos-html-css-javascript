@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.querySelector('#modal')
     const btnExibir = document.querySelector('.btnExibir')
     const btnSalvar = document.querySelector('.btnSalvar')
+    const btnFechar = document.querySelector('#btnFechar')
 
     let pessoa = {
         nome,
@@ -24,13 +25,18 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault()
         salvarDados()
 
-        console.log("fechar Modal")
+        console.log("Salvando e Fechando Modal")
         modal.setAttribute('class','modal oculto')
     })
     
     btnExibir.addEventListener('click', () => {
         console.log("exibir Modal")
         modal.setAttribute('class','modal' )
+    })
+
+    btnFechar.addEventListener('click',() => {
+        console.log('Fechar Modal sem Salvar')
+        modal.classList.toggle('oculto')
     })
 
     const salvarDados = () => {
