@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnSalvar = document.querySelector('.btnSalvar')
     const btnFechar = document.querySelector('#btnFechar')
     const divInfo = document.querySelector('.info')
+    const btnEditar = document.querySelector('.btnEditar')
+    const btnExcluir = document.querySelector('.btnExcluir')
 
     let pessoa = {
         nome,
@@ -20,8 +22,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const getLocalStorage = () => JSON.parse(localStorage.getItem('dbBanco') )?? []
     const setLocalStorage = (banco) => localStorage.setItem('dbBanco', JSON.stringify(banco))
+
+    const dadosValidos = () => {
+        return document.querySelector('.dados').reportValidity()
+    }
  
     const preencher = () => {
+        let contador = 0
         divInfo.innerHTML = ""
         const dados = getLocalStorage()
         console.log(dados)
@@ -29,10 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const divClient = document.createElement('div')
             divClient.setAttribute('class','cliente')
             divClient.innerHTML = `<div>${dado.nome}</div>
-            <div>${dado.email}</div>
-              <div>${dado.profissao}</div>
-              <div><button>Editar</button><button>Excluir</button></div>`
+                                    <div>${dado.email}</div>
+                                    <div>${dado.profissao}</div>
+                                <div><button id=${contador} class="btnEditar">Editar</button><button class="btnExcluir">Excluir</button></div>`
         divInfo.appendChild(divClient)
+        contador++
         })
     }
     
@@ -56,26 +64,33 @@ preencher()
         modal.classList.toggle('oculto')
     })
 
+    const editar = () => {
+        btnEditar
+    }
+
     const salvarDados = () => {
-        const nome = document.querySelector("#nome").value
-        const email = document.querySelector("#email").value
-        const profissao = document.querySelector("#profissao").value
+        if(dadosValidos()){
+                const nome = document.querySelector("#nome").value
+                const email = document.querySelector("#email").value
+                const profissao = document.querySelector("#profissao").value
+        
+                pessoa.nome = nome 
+                pessoa.email = email
+                pessoa.profissao = profissao
+        
+                const banco = getLocalStorage()
+                banco.push(pessoa)
+        
+                // localStorage.setItem('dbBanco', JSON.stringify(banco))
+                setLocalStorage(banco)
+        
+                console.log(pessoa)
+        
+                limparCampos()
+        
+                preencher()
 
-        pessoa.nome = nome 
-        pessoa.email = email
-        pessoa.profissao = profissao
-
-        const banco = getLocalStorage()
-        banco.push(pessoa)
-
-        // localStorage.setItem('dbBanco', JSON.stringify(banco))
-        setLocalStorage(banco)
-
-        console.log(pessoa)
-
-        limparCampos()
-
-        preencher()
+        }
 
     }
     
