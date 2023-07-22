@@ -10,10 +10,20 @@ document.addEventListener('DOMContentLoaded', () => {
         profissao
     }
 
+    const limparCampos = () => {
+        document.querySelectorAll('.campo').forEach((campo) =>{
+            campo.value = ""
+        })
+    }
+
+    const getLocalStorage = () => JSON.parse(localStorage.getItem('banco') )?? []
+     
  
 
-    btnSalvar.addEventListener('click', () => {
+    btnSalvar.addEventListener('click', (e) => {
+        e.preventDefault()
         salvarDados()
+
         console.log("fechar Modal")
         modal.setAttribute('class','modal oculto')
     })
@@ -24,23 +34,19 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     const salvarDados = () => {
-        const nome = document.querySelector("#nome")
-        const email = document.querySelector("#email")
-        const profissao = document.querySelector("#profissao")
+        const nome = document.querySelector("#nome").value
+        const email = document.querySelector("#email").value
+        const profissao = document.querySelector("#profissao").value
 
-        pessoa.nome = nome.value 
-        pessoa.email = email.value 
-        pessoa.profissao = profissao.value 
+        pessoa.nome = nome 
+        pessoa.email = email
+        pessoa.profissao = profissao
+
+
         console.log(pessoa)
 
-        nome.value = ""
-        email.value = ""
-        profissao.value = ""
+        limparCampos()
 
-       
     }
     
-
-
-
 })
