@@ -60,7 +60,6 @@ const saveClient = () => {
             cidade: document.getElementById('cidade').value
         }
         createClient(client)
-        clearFields()
         closeModal()
        
         console.log('Cadastrando cliente....')
@@ -83,5 +82,5 @@ document.getElementById('salvar')
 // document.querySelector('#tableClient>tbody')
 //     .addEventListener('click', editDelete)
 
-// document.getElementById('cancelar')
-//     .addEventListener('click', closeModal)
+document.getElementById('cancelar')
+    .addEventListener('click', closeModal)
