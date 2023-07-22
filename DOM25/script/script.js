@@ -1,11 +1,11 @@
 'use strict'
 
 const openModal = () => document.getElementById('modal')
-    .classList.add('active')
+    .classList.toggle('active')
 
 const closeModal = () => {
-    // clearFields()
-    document.getElementById('modal').classList.remove('active')
+    clearFields()
+    document.getElementById('modal').classList.toggle('active')
 }
 const tempClient = {
     nome: "Marcos",
