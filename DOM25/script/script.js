@@ -64,15 +64,15 @@ const saveClient = () => {
     updateTable()
 }
 
-const createRow = (client) => {
+const createRow = (client, index) => {
     const newRow = document.createElement('tr')
     newRow.innerHTML = `<td>${client.nome}</td>
                         <td>${client.email}</td>
                         <td>${client.celular}</td>
                         <td>${client.cidade}</td>
                         <td>
-                            <button type="button" class="button green">Editar</button>
-                            <button type="button" class="button red">Excluir</button>
+                            <button type="button" class="button green" data-action="${index}-edit">Editar</button>
+                            <button type="button" class="button red" data-action="${index}-delete">Excluir</button>
                         </td>`
     document.querySelector('#tableClient>tbody').appendChild(newRow)                    
 }
