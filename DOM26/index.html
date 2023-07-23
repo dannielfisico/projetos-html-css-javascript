@@ -14,40 +14,75 @@
             <button  class="btnExibir">Cadastrar Cliente</button>
         </div>
         <div class="main">
-            <section id="campos">
-                <div class="titulos">NOME</div>
-                <div class="titulos">E-MAIL</div>
-                <div class="titulos">PROFISSÃO</div>
-                <div class="titulos">AÇÕES</div>
-            </section>
+            <div class="campos">
+                    <div>Nome</div>
+                    <div>E-mail</div>
+                    <div>Profissão</div>
+                    <div>Ações</div>
+            </div>
+            
             <div class="info">
-                <!-- <div class="cliente">
+                <div class="cliente">
                     <div>Daniel</div>
                     <div>dannielfisico@hotmail.com</div>
-                    <div>Engenheiro de Software</div>
-                    <div><button>Editar</button><button>Excluir</button></div>
+                    <div>Engenheiro de Software e Professor Universitário</div>
+                    <div><button id="btnEditar">Editar</button><button id="btnExcluir">Excluir</button></div>
                 </div>
                 <div class="cliente">
                     <div>Carlos</div>
                     <div>carlos@hotmail.com</div>
                     <div>Médico</div>
                     <div><button id="btnEditar">Editar</button><button id="btnExcluir">Excluir</button></div>
-                </div> -->
+                </div>
+                <div class="cliente">
+                    <div>Carlos</div>
+                    <div>carlos@hotmail.com</div>
+                    <div>Médico</div>
+                    <div><button id="btnEditar">Editar</button><button id="btnExcluir">Excluir</button></div>
+                </div>
+                <div class="cliente">
+                    <div>Carlos</div>
+                    <div>carlos@hotmail.com</div>
+                    <div>Médico</div>
+                    <div><button id="btnEditar">Editar</button><button id="btnExcluir">Excluir</button></div>
+                </div>
+                <div class="cliente">
+                    <div>Carlos</div>
+                    <div>carlos@hotmail.com</div>
+                    <div>Médico</div>
+                    <div><button id="btnEditar">Editar</button><button id="btnExcluir">Excluir</button></div>
+                </div>
+                <div class="cliente">
+                    <div>Carlos</div>
+                    <div>carlos@hotmail.com</div>
+                    <div>Médico</div>
+                    <div><button id="btnEditar">Editar</button><button id="btnExcluir">Excluir</button></div>
+                </div>
+                <div class="cliente">
+                    <div>Carlos</div>
+                    <div>carlos@hotmail.com</div>
+                    <div>Médico</div>
+                    <div><button id="btnEditar">Editar</button><button id="btnExcluir">Excluir</button></div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div id="modal"  class="modal oculto">
-        <div class="modal-header">
-            <h2>Informe os dados do Novo Cliente</h2>
-            <a id="btnFechar" href="#">X</a>
+    <div id="modal" class="overlay oculto">
+        <div   class="modal">
+            <div class="modal-header">
+                <h2>Informe os dados do Novo Cliente</h2>
+                <a id="btnFechar" href="#">X</a>
+                <!-- <p>X</p> -->
+            </div>
+            <form class="dados">
+                <input class="campo" id="nome" type="text" minlength="3" placeholder="Nome" required>
+                <input class="campo" id="email" type="email" placeholder="E-mail" required>
+                <input class="campo" id="profissao" type="text" placeholder="Profissão" required>
+                <input type="submit" class="btnSalvar" value="Salvar">
+            </form>
         </div>
-        <form class="dados">
-            <input class="campo" id="nome" type="text" minlength="3" placeholder="Nome" required>
-            <input class="campo" id="email" type="email" placeholder="E-mail" required>
-            <input class="campo" id="profissao" type="text" placeholder="Profissão" required>
-            <input type="submit" class="btnSalvar" value="Salvar" disabled>
-        </form>
     </div>
+    
 </body>
 </html>
