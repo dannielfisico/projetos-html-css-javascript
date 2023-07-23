@@ -89,6 +89,28 @@ const updateTable = () => {
 
 updateTable()
 
+const editDelete = (event) => {
+    // console.log(event.target)
+    if(event.target.type == 'button'){
+        const alvo = event.target
+        // console.log(alvo)
+        const acao = alvo.dataset.action
+        console.log(acao)
+        const [indice, action] = acao.split('-')
+        console.log(indice)
+        console.log(action)
+        const bancoDeDados = readClient()
+        if(action == 'delete'){
+            console.log(`${action} o registro ${indice}`)
+            bancoDeDados.splice(indice,1)
+            setLocalStorage(bancoDeDados)
+            updateTable()
+        }else {
+            console.log(`${action} o registro ${indice}`)
+        }
+    }
+}
+
 
 // Eventos
 document.getElementById('cadastrarCliente')
@@ -100,8 +122,8 @@ document.getElementById('modalClose')
 document.getElementById('salvar')
     .addEventListener('click', saveClient)
 
-// document.querySelector('#tableClient>tbody')
-//     .addEventListener('click', editDelete)
+document.querySelector('#tableClient>tbody').addEventListener('click', editDelete)
+
 
 document.getElementById('cancelar')
     .addEventListener('click', closeModal)
