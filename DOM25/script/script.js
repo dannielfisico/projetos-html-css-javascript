@@ -1,7 +1,9 @@
 'use strict'
 
-const openModal = () => document.getElementById('modal')
-    .classList.toggle('active')
+const openModal = () => {
+    const tituloModal = document.querySelector('.modal-header h2')
+            tituloModal.innerHTML = `Cadastrar Novo Cliente`
+    document.getElementById('modal').classList.toggle('active')}
 
 const closeModal = () => {
     clearFields()
@@ -46,7 +48,10 @@ const clearFields = () => {
     const fields = document.querySelectorAll('.modal-field')
     fields.forEach(field => field.value = "")
 }
+
 const saveClient = () => {
+    
+    
     if (isValidFields()){
         const client = {
             nome: document.getElementById('nome').value,
@@ -54,10 +59,18 @@ const saveClient = () => {
             celular: document.getElementById('celular').value,
             cidade: document.getElementById('cidade').value
         }
-        createClient(client)
-        closeModal()
-       
-        console.log('Cadastrando cliente....')
+        const index = document.getElementById('nome').dataset.index
+        
+        if(index == 'new'){
+            createClient(client)
+            closeModal()
+            console.log('Cadastrando cliente....')
+        }else {
+            console.log('Editando.....')
+            updateClient(index, client)
+            updateTable()
+            closeModal()
+        }
     } else {
         console.log('Preencha todos os campos antes de salvar....')
     }
@@ -82,12 +95,28 @@ const clearTable = () => {
 }
 
 const updateTable = () => {
+    
     const dbClient = readClient()
     clearTable()
     dbClient.forEach(createRow)
 }
 
 updateTable()
+
+const preencherCampos = (cliente) => {
+    document.getElementById('nome').value = cliente.nome
+    document.getElementById('email').value = cliente.email
+    document.getElementById('celular').value = cliente.celular
+    document.getElementById('cidade').value = cliente.cidade
+    document.getElementById('nome').dataset.index = cliente.index
+}
+
+const editClient = (index) => {
+    const cliente = readClient()[index]
+    cliente.index = index
+    console.log(cliente)
+    preencherCampos(cliente)
+}
 
 const editDelete = (event) => {
     // console.log(event.target)
@@ -100,15 +129,28 @@ const editDelete = (event) => {
         console.log(indice)
         console.log(action)
         const bancoDeDados = readClient()
-        if(action == 'delete'){
+        if(action == 'delete'){ //Ação de Excluir
             console.log(`${action} o registro ${indice}`)
-            bancoDeDados.splice(indice,1)
-            setLocalStorage(bancoDeDados)
-            updateTable()
-        }else {
+            // bancoDeDados.splice(indice,1)
+            const cliente = readClient()[indice]
+            const resposta = confirm(`Deseja excluir ${cliente.nome}?`)
+            if(resposta){
+                setLocalStorage(bancoDeDados)
+                deleteClient(indice)
+                updateTable()
+            }
+        }else { //Ação de Editar
+            openModal()
             console.log(`${action} o registro ${indice}`)
+            const tituloModal = document.querySelector('.modal-header h2')
+            tituloModal.innerHTML = `Editando: ${bancoDeDados[indice].nome}`
+            editClient(indice)
+            
+
+            
         }
     }
+    
 }
 
 
