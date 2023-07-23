@@ -48,7 +48,7 @@ body {
 
 .campos, .cliente {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: .5fr 1fr 1fr 1fr .8fr;
     margin-bottom: 5px;
     border-bottom: 1px solid black;
     padding: 2px;
@@ -70,18 +70,17 @@ body {
     margin-right: 15px;
     border: none;
     cursor: pointer;
+    transition: box-shadow .8s ease;
 }
 
-.btnExibir {
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
+.btnCadastrar {
+    background-color: #008000;
+    color: #ffffff;
     font-weight: bold;
 }
 
 .btnCadastrar:hover {
-    background-color: #333333b6;
-    color: #ffffff;
-    transition: ease-in-out .5s;
+    box-shadow: inset 150px 0 0 #00000034;
 }
 
 #btnEditar {
