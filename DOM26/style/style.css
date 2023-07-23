@@ -17,7 +17,9 @@ body {
     width: 80%;
     height: 100vh;
     margin: auto;
-    background-color: #4016f8;
+    background-color: #333333b2;
+    overflow: scroll; 
+    
 }
 
 
@@ -31,8 +33,10 @@ body {
 }
 
 .container-header {
-    background-color: red;
+    
     padding: 30px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .main {
@@ -53,10 +57,12 @@ body {
 
 .cliente div {
     margin: 0 5px 0 0;
+    padding: 0 0 0 15px;
 }
 
 .campos div {
     font-weight: bold;
+    padding: 15px;
 }
 
 #btnEditar, #btnExcluir, .btnExibir {
@@ -67,8 +73,8 @@ body {
 }
 
 .btnExibir {
-    background-color: #008000;
-    color: rgb(255, 255, 255);
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     font-weight: bold;
 }
 
