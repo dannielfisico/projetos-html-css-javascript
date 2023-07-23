@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const divInfo = document.querySelector('.info')
     const btnEditar = document.querySelector('.btnEditar')
     const btnExcluir = document.querySelector('.btnExcluir')
+    const qtd = document.querySelector('#qtd')
 
     let pessoa = {
         nome,
@@ -26,6 +27,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const dadosValidos = () => {
         return document.querySelector('.dados').reportValidity()
     }
+
+    const ativarBtnSalvar = () =>  {
+        setInterval(() => {
+            if(dadosValidos()){
+                btnSalvar.removeAttribute('disabled')
+            }
+            
+        }, 10);
+
+
+    }
+
+    
+       
  
     const preencher = () => {
         let contador = 0
@@ -38,9 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
             divClient.innerHTML = `<div>${dado.nome}</div>
                                     <div>${dado.email}</div>
                                     <div>${dado.profissao}</div>
-                                <div><button id=${contador} class="btnEditar">Editar</button><button class="btnExcluir">Excluir</button></div>`
-        divInfo.appendChild(divClient)
-        contador++
+                                    <div><button data-id="${contador}-edit" class="btnEditar">Editar</button><button data-id="${contador}-delete" class="btnExcluir">Excluir</button></div>`
+                                    divInfo.appendChild(divClient)
+                                    contador++
+                                    qtd.innerHTML = contador
         })
     }
     
@@ -64,9 +80,8 @@ preencher()
         modal.classList.toggle('oculto')
     })
 
-    const editar = () => {
-        btnEditar
-    }
+  
+    ativarBtnSalvar()
 
     const salvarDados = () => {
         if(dadosValidos()){

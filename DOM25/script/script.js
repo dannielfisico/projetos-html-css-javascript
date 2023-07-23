@@ -7,12 +7,7 @@ const closeModal = () => {
     clearFields()
     document.getElementById('modal').classList.toggle('active')
 }
-const tempClient = {
-    nome: "Marcos",
-    email: "marcos@hotmail.com",
-    celular: "84455323",
-    cidade: "Rio de Janeiro"
-}
+
 
 const getLocalStorage = () => JSON.parse(localStorage.getItem('dbClient'))  ?? []
 const setLocalStorage = (dbClient) => localStorage.setItem('dbClient', JSON.stringify(dbClient))
@@ -66,7 +61,33 @@ const saveClient = () => {
     } else {
         console.log('Preencha todos os campos antes de salvar....')
     }
+    updateTable()
 }
+
+const createRow = (client) => {
+    const newRow = document.createElement('tr')
+    newRow.innerHTML = `<td>${client.nome}</td>
+                        <td>${client.email}</td>
+                        <td>${client.celular}</td>
+                        <td>${client.cidade}</td>
+                        <td>
+                            <button type="button" class="button green">Editar</button>
+                            <button type="button" class="button red">Excluir</button>
+                        </td>`
+    document.querySelector('#tableClient>tbody').appendChild(newRow)                    
+}
+
+const clearTable = () => {
+    const table = document.querySelector('#tableClient>tbody').innerHTML = ""
+}
+
+const updateTable = () => {
+    const dbClient = readClient()
+    clearTable()
+    dbClient.forEach(createRow)
+}
+
+updateTable()
 
 
 // Eventos
