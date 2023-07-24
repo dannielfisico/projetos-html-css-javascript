@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('página carregada com sucesso...')
+console.log('página carregada com sucesso...')
 
     //Funções
 
@@ -24,5 +23,22 @@ document.addEventListener('DOMContentLoaded', () => {
     btnCadastrar.addEventListener('click', exibirModalOverlay)
     btnFechar.addEventListener('click', fecharModalOverlay)
 
-})
+    // TempCliente
 
+    const tempCliente = {
+        nome: 'Fernando Nonato',
+        email: 'fernandononato@gmail.com',
+        profissoao: 'Comerciante'
+    }
+
+    //Ler registros do LocalStorage
+
+    
+
+    //Salvar Registro
+
+    
+
+    
+
+    

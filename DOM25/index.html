@@ -40,9 +40,9 @@
             <div class="modal-content">
                 <header class="modal-header">
                     <h2>Novo Cliente</h2>
-                    <span class="modal-close" id="modalClose">&#10006;</span>
+                    <span class="modal-close" id="modalClose">&#x2716;</span>
                 </header>
-                <form id="form" class="modal-form">
+                <form id="form" class="modal-form oculto">
                     <input minlength="3" type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome do Cliente"
                         required>
                     <input type="email" id="email" class="modal-field" placeholder="e-mail do Cliente" required>
@@ -50,8 +50,10 @@
                     <input minlength="3" type="text" id="cidade" class="modal-field" placeholder="Cidade do Cliente" required>
                 </form>
                 <footer class="modal-footer">
-                    <button id="salvar" class="button green">Salvar</button>
-                    <button id="cancelar" class="button blue">Cancelar</button>
+
+                    <button id="salvar" class="button green oculto">Salvar</button>
+                    <button id="btnDelete" class="button green">Excluir Definitivamente</button>
+                    <button id="cancelar" class="button blue oculto">Cancelar</button>
                 </footer>
             </div>
         </div>

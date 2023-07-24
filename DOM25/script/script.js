@@ -3,12 +3,26 @@
 const openModal = () => {
     const tituloModal = document.querySelector('.modal-header h2')
             tituloModal.innerHTML = `Cadastrar Novo Cliente`
-    document.getElementById('modal').classList.toggle('active')}
+    document.getElementById('modal').classList.toggle('active')
+    ocultarExibirModalForm()}
 
 const closeModal = () => {
     clearFields()
+    ocultarExibirModalForm()
     document.getElementById('modal').classList.toggle('active')
 }
+
+const ocultarExibirModalForm = () => {
+    const modalForm = document.querySelector("#form")
+    const botaoSalvarModalFooter = document.querySelector('#salvar')
+    const botaoCancelaModalFooter = document.querySelector('#cancelar')
+    const botaoDelete = document.querySelector('#btnDelete')
+    modalForm.classList.toggle('oculto')
+    botaoSalvarModalFooter.classList.toggle('oculto')
+    botaoCancelaModalFooter.classList.toggle('oculto')
+    botaoDelete.classList.toggle('oculto')
+}
+
 
 
 const getLocalStorage = () => JSON.parse(localStorage.getItem('dbClient'))  ?? []
@@ -169,3 +183,4 @@ document.querySelector('#tableClient>tbody').addEventListener('click', editDelet
 
 document.getElementById('cancelar')
     .addEventListener('click', closeModal)
+

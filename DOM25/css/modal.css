@@ -99,3 +99,8 @@
         width:100%;
     }
 }
+
+/*Ocultar parte do conteúdo do Modal*/
+.oculto {
+    display: none;
+}
