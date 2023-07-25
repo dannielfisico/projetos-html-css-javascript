@@ -160,6 +160,14 @@ body {
     user-select: none;
 }
 
+.exclusao {
+    padding: 30px;
+    width: 70%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
 .dados {
     display: flex;
     flex-direction: column;
@@ -170,7 +178,6 @@ body {
 .dados > input {
     margin-bottom: 5px;
     padding: 4px;
-
 }
 
 .btn {
