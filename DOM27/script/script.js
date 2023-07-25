@@ -48,6 +48,8 @@ const abrirModal = () => {
     const modal = document.querySelector('.modal')
     modal.classList.toggle('oculto')
 }
+
+
 //eventos
 btnCadastrar.addEventListener('click', abrirModal)
 btnFechar.addEventListener('click', abrirModal)
