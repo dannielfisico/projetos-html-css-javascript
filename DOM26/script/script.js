@@ -13,6 +13,8 @@ const exibirOcultarModalExcluir = () => {
 //Botões
 const btnCadastrar = document.querySelector(".btnCadastrar");
 const btnFechar = document.querySelector("#btnFechar");
+const btnCancelar = document.querySelector('#btnCancelar')
+const btnFecharModalExluir = document.querySelector('#btnFecharModalExluir')
 
 //Modal Overlay
 const modalOverlay = document.querySelector(".overlay");
@@ -23,6 +25,8 @@ const modalExcluir = document.querySelector('.modal-excluir')
 
 btnCadastrar.addEventListener("click", exibirOcultarModal);
 btnFechar.addEventListener("click", exibirOcultarModal);
+btnCancelar.addEventListener('click', exibirOcultarModalExcluir)
+btnFecharModalExluir.addEventListener('click', exibirOcultarModalExcluir)
 
 // TempCliente
 const tempCliente = {
