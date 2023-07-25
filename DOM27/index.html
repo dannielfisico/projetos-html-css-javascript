@@ -1,13 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
     <script defer src="./script/script.js"></script>
     <title>LocalStorage</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <header>
+      <h2>CADASTRO DE CLIENTES</h2>
+      <div class="controle">
+          <a class="btn btnCadastrar" href="#">Cadastrar Cliente</a>
+        <h3>Total de Registros <span id="registros">0</span></h3>
+      </div>
+    </header>
+    <main>
+      <div class="tabela">
+        <table>
+          <thead>
+            <td>ID</td>
+            <td>NOME</td>
+            <td>SOBRENOME</td>
+            <td>IDADE</td>
+            <td>PROFISSÃO</td>
+            <td>AÇÕES</td>
+          </thead>
+          <tbody>
+            <td>1</td>
+            <td>DANIEL</td>
+            <td>ALVES DE ARAÚJO</td>
+            <td>38</td>
+            <td>ENGENHEIRO DE SOFTWARE</td>
+            <td>
+                <a class="btn btnEditar" href="#">EDITAR</a>
+                <a class="btn btnExcluir" href="#">EXCLUIR</a>
+            </td>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <footer>
+        <h4>CRUD - CADASTRO DE CLIENTE NO LOCAL STORAGE</h4>
+    </footer>
+  </body>
 </html>

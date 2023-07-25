@@ -4,7 +4,7 @@ const pessoa = {
   idade: 32,
   profissao: "Estudante",
 };
-
+// CRUD LOCAL STORAGE
 // CREATE - Criar Novo Registro
 const setLocalStorage = (dbClientes) =>
   localStorage.setItem("dbClientes", JSON.stringify(dbClientes));
