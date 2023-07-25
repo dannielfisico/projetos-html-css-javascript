@@ -48,7 +48,7 @@ body {
 
 .campos, .cliente {
     display: grid;
-    grid-template-columns: .5fr 1fr 1fr 1fr .8fr;
+    grid-template-columns: .5fr .8fr 1fr 1fr .8fr;
     margin-bottom: 5px;
     border-bottom: 1px solid black;
     padding: 2px;
