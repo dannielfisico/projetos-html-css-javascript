@@ -1,9 +1,13 @@
 console.log("página carregada com sucesso...");
 
-//Funções
+//Funções de exibição dos Modais
 
 const exibirOcultarModal = () => {
   modalOverlay.classList.toggle("oculto");
+};
+
+const exibirOcultarModalExcluir = () => {
+  modalExcluir.classList.toggle("oculto");
 };
 
 //Botões
@@ -12,6 +16,8 @@ const btnFechar = document.querySelector("#btnFechar");
 
 //Modal Overlay
 const modalOverlay = document.querySelector(".overlay");
+//Modal Excluir
+const modalExcluir = document.querySelector('.modal-excluir')
 
 //Evento exibir Modal Overlay
 

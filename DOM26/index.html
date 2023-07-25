@@ -32,6 +32,7 @@
                     <div><button id="btnEditar">Editar</button><button id="btnExcluir">Excluir</button></div>
                 </div>
                 
+                
             </div>
         </div>
     </div>
@@ -49,6 +50,17 @@
                 <input class="campo" id="profissao" type="text" placeholder="Profissão" required>
                 <input type="submit" class="btnSalvar" value="Salvar">
             </form>
+        </div>
+    </div>
+    <div id="modal-excluir" class="modal-excluir oculto">
+        <div   class="modal">
+            <div class="modal-header">
+                <h2>Excluir Cliente</h2>
+                <a id="btnFechar" href="#">X</a>
+                
+            </div>
+            <h1>Deseja Realmente Excluir o cliente ${nome do cliente}?</h1>
+            <input id="btnExcluirDefinitivamente" type="button" value="Excluir Definitivamente">
         </div>
     </div>
     
