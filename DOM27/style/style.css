@@ -21,6 +21,7 @@ header {
   justify-content: space-between;
   width: 60%;
   margin: auto;
+  
 }
 
 main {
@@ -33,7 +34,7 @@ main {
     height: 100%;
     padding: 20px;
     margin: 0 auto 0 auto;
-    background-color: rgba(150, 149, 151, 0.205);
+    /* background-color: rgba(150, 149, 151, 0.205); */
 }
 
 
@@ -46,8 +47,41 @@ table {
 }
 
 thead {
+    background-color: rgba(0, 0, 255, 0.541);
+    color: #ffffff;
+}
+
+tr {
+    background-color: rgba(255, 166, 0, 0.705);
+}
+
+.acoes {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn {
+    text-decoration: none;
+    
+    
+}
+
+.btnCadastrar {
+    background-color: blue;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.btnEditar {
+    background-color: green;
+    color: #fffefe;
+    font-weight: bold;
+}
+
+.btnExcluir {
     background-color: red;
-    color: #eee;
+    color: #fffefe;
+    font-weight: bold;
 }
 
 footer {
