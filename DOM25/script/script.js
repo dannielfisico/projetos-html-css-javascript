@@ -6,6 +6,12 @@ const openModal = () => {
     document.getElementById('modal').classList.toggle('active')
     ocultarExibirModalForm()}
 
+const openModalExcluir = (index) => {
+    const tituloModal = document.querySelector('.modal-header h2')
+            tituloModal.innerHTML = `Excluir Cliente`
+    document.getElementById('modal').classList.toggle('active')
+    }
+
 const closeModal = () => {
     clearFields()
     ocultarExibirModalForm()
