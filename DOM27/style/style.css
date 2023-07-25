@@ -84,6 +84,10 @@ tr {
     font-weight: bold;
 }
 
+.btnFechar:hover {
+    background-color: red;
+}
+
 .modal {
     position: absolute;
     top: 0;
@@ -109,7 +113,7 @@ form {
     display: flex;
     justify-content: space-between;
     padding: 5px 25px 5px 25px;
-    background-color: rgba(255, 166, 0, 0.705);
+    background-color: rgb(255, 166, 0);
 }
 
 form input {
