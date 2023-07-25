@@ -2,13 +2,10 @@ console.log('página carregada com sucesso...')
 
     //Funções
 
-    const exibirModalOverlay = () => {
+    const exibirOcultarModal = () => {
         modalOverlay.classList.toggle('oculto')
     }
 
-    const fecharModalOverlay = () => {
-        modalOverlay.classList.toggle('oculto')
-    }
 
     //Botões
     const btnCadastrar = document.querySelector('.btnCadastrar')
@@ -20,8 +17,8 @@ console.log('página carregada com sucesso...')
 
     //Evento exibir Modal Overlay
 
-    btnCadastrar.addEventListener('click', exibirModalOverlay)
-    btnFechar.addEventListener('click', fecharModalOverlay)
+    btnCadastrar.addEventListener('click', exibirOcultarModal)
+    btnFechar.addEventListener('click', exibirOcultarModal)
 
     // TempCliente
 
