@@ -47,6 +47,7 @@ main {
   padding: 15px;
   box-shadow: 0 0 10px #000000a5;
   margin: 10px auto;
+  overflow: hidden;
 }
 
 .controls {
@@ -55,12 +56,29 @@ main {
 }
 
 table {
-    width: 100%;
-    margin: auto;
+  width: 100%;
+  margin: auto;
 }
 
 thead {
-  background-color: var(--violeta);
+  background-color: var(--azul);
+  color: white;
+}
+tr:nth-child(even) {
+  background-color: var(--verde);
+}
+
+/* tr:nth-child(odd){
+    background-color: var(--verde);
+} */
+
+.container table > tbody {
+  overflow: scroll;
+}
+
+.container {
+  overflow: scroll;
+  height: 100%;
 }
 
 td {
