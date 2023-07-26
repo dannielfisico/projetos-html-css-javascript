@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+:root {
+    --laranja:var(#F79D2A);
+    --violeta:var(#D669A8);
+    --azul:var(#344CEB);
+    --verde:var(#4DD694);
+}
+
