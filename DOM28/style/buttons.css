@@ -1,7 +1,34 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --laranja: #f79d2a;
+  --violeta: #d669a8;
+  --azul: #344ceb;
+  --verde: #4dd694;
+}
+
+.btn {
+    padding: .4rem;
+    font-weight: bold;
+    border: none;
+    color: white;
+
+}
+
+.btnCadastar {
+    background-color: var(--azul);
     
 }
 
+.btnEditar {
+    background-color: var(--verde);
+    color: #000;
+}
+
+.btnExcluir {
+    background-color: var(--violeta);
+}

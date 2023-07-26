@@ -1,49 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="./style/main.css">
-    <link rel="stylesheet" href="./style/buttons.css">
-    <link rel="stylesheet" href="./style/modal.css">
-    <link rel="stylesheet" href="./style/table.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/buttons.css" />
+    <link rel="stylesheet" href="./style/modal.css" />
+    <link rel="stylesheet" href="./style/table.css" />
     <title>Layout para CRUD - Cadastro de Clientes</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>CADASTRO DE CLIENTES</h1>
+      <h1>CADASTRO DE CLIENTES</h1>
     </header>
     <main>
+      <div class="controls">
         <button class="btn btnCadastar">Cadastar Cliente</button>
-        <div class="container">
-            <table>
-                <thead>
-                    <td>ID</td>
-                    <td>NOME</td>
-                    <td>TELEFONE</td>
-                    <td>E-MAIL</td>
-                    <td>CIDADE</td>
-                    <td>AÇÕES</td>
-                </thead>
-                <tbody>
-                    <td>1</td>
-                    <td>Daniel</td>
-                    <td>(88) 9 8818-3286)</td>
-                    <td>dannielfisico@hotmail.com</td>
-                    <td>Guaraciaba do Norte</td>
-                    <td>
-                        <button class="btn btnEditar">Editar</button>
-                        <button class="btn btnExcluir">Excluir</button>
-                    </td>
-                </tbody>
-            </table>
-        </div>
+      </div>
+      <div class="container">
+        <table>
+          <thead>
+            <td>ID</td>
+            <td>NOME</td>
+            <td>TELEFONE</td>
+            <td>E-MAIL</td>
+            <td>CIDADE</td>
+            <td>AÇÕES</td>
+          </thead>
+          <tbody>
+            <div class="client">
+              <tr>
+                <td>1</td>
+                <td>Daniel</td>
+                <td>(88) 9 8818-3286)</td>
+                <td>dannielfisico@hotmail.com</td>
+                <td>Guaraciaba do Norte</td>
+                <td id="acoes">
+                  <button class="btn btnEditar">Editar</button>
+                  <button class="btn btnExcluir">Excluir</button>
+                </td>
+              </tr>
+            </div>
+            <div class="client">
+              <tr>
+                <td>1</td>
+                <td>Daniel</td>
+                <td>(88) 9 8818-3286)</td>
+                <td>dannielfisico@hotmail.com</td>
+                <td>Guaraciaba do Norte</td>
+                <td id="acoes">
+                  <button class="btn btnEditar">Editar</button>
+                  <button class="btn btnExcluir">Excluir</button>
+                </td>
+              </tr>
+            </div>
+            <div class="client">
+              <tr>
+                <td>1</td>
+                <td>Daniel</td>
+                <td>(88) 9 8818-3286)</td>
+                <td>dannielfisico@hotmail.com</td>
+                <td>Guaraciaba do Norte</td>
+                <td id="acoes">
+                  <button class="btn btnEditar">Editar</button>
+                  <button class="btn btnExcluir">Excluir</button>
+                </td>
+              </tr>
+            </div>
+            <div class="client">
+              <tr>
+                <td>1</td>
+                <td>Daniel</td>
+                <td>(88) 9 8818-3286)</td>
+                <td>dannielfisico@hotmail.com</td>
+                <td>Guaraciaba do Norte</td>
+                <td id="acoes">
+                  <button class="btn btnEditar">Editar</button>
+                  <button class="btn btnExcluir">Excluir</button>
+                </td>
+              </tr>
+            </div>
+          </tbody>
+        </table>
+      </div>
     </main>
     <footer>
-        <h5>CRUD</h5>
-        <h5>DESENVOLVIDO POR DANIEL ALVES </h5>
-        <h5>2023</h5>
+      <h5>CRUD</h5>
+      <h5>DESENVOLVIDO POR DANIEL ALVES</h5>
+      <h5>2023</h5>
     </footer>
-</body>
+  </body>
 </html>
