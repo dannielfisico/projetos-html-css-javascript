@@ -1,21 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/main.css">
-    <link rel="stylesheet" href="./style/header-title.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/header-title.css" />
     <title>CRUD</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1 class="header-title">Cadastro de Clientes</h1>
+      <h1 class="header-title">Cadastro de Clientes</h1>
     </header>
     <main>
-        main
+      <button type="button">Cadastar Cliente</button>
+      <table>
+        <thead>
+          <tr>
+            <th>NOME</th>
+            <th>E-MAIL</th>
+            <th>CELULAR</th>
+            <th>CIDADE</th>
+            <th>AÇÃO</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Daniel Alves</td>
+                <td>dannielfisico@hotmail.com</td>
+                <td>(88)9 8818-3286</td>
+                <td>Guaraciaba do Norte</td>
+                <td>
+                    <button class="btn btnEditar" type="button">Editar</button>
+                    <button class="btn btnExcluir" type="button">Excluir</button>
+                </td>
+            </tr>
+        </tbody>
+      </table>
     </main>
-    <footer>
-        footer
-    </footer>
-</body>
+    <footer>footer</footer>
+  </body>
 </html>
