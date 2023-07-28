@@ -30,7 +30,8 @@ main {
   width: 90%;
   margin: 5vh auto;
   padding: 5vh;
-  box-shadow: 0px 0px 3px #0000009c;
+  box-shadow: 2px 2px 6px;
+  gap: 20px;
 }
 
 footer {
