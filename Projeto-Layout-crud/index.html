@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style/header-title.css" />
     <link rel="stylesheet" href="./style/button.css" />
     <link rel="stylesheet" href="./style/recods.css" />
+    <link rel="stylesheet" href="./style/modal.css" />
     <title>CRUD</title>
   </head>
   <body>
@@ -47,7 +48,7 @@
               <button class="btn btnExcluir" type="button">Excluir</button>
             </td>
           </tr>
-          
+
           <tr>
             <td>Gustavo Guanabara</td>
             <td>gustavoguanabara@gmail.com</td>
@@ -58,9 +59,46 @@
               <button class="btn btnExcluir" type="button">Excluir</button>
             </td>
           </tr>
-
         </tbody>
       </table>
+      <div class="modal">
+        <div class="modal-content">
+          <header>
+            <h2>Novo Cliente</h2>
+            <span class="modal-close">&#10006;</span>
+          </header>
+          <form>
+            <input
+              type="text"
+              class="modal-fild"
+              placeholder="Nome do cliente"
+              required
+            />
+            <input
+              type="email"
+              class="modal-fild"
+              placeholder="E-mail"
+              required
+            />
+            <input
+              type="tel"
+              class="modal-fild"
+              placeholder="Celular"
+              required
+            />
+            <input
+              type="text"
+              class="modal-fild"
+              placeholder="Cidade"
+              required
+            />
+          </form>
+          <footer class="modal-footer">
+            <button class="btn btnSalvar" type="button">Salvar</button>
+            <button class="btn btnCancelar" type="button">Cancelar</button>
+          </footer>
+        </div>
+      </div>
     </main>
     <footer>footer</footer>
   </body>
