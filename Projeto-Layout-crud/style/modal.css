@@ -7,6 +7,16 @@
   background-color: #000000c4;
 }
 
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50vw;
+    margin: 15vh auto;
+    background-color: white;
+    box-shadow: 1px 1px  10px black;
+}
+
 .modal-content header {
   display: flex;
   justify-content: space-between;
@@ -27,4 +37,9 @@
 
 .modal-close:hover {
     background-color: red;
+}
+
+
+.modal form {
+    dis
 }
