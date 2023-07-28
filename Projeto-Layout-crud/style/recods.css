@@ -17,9 +17,16 @@
   padding-left: 20px;
 }
 
+.records th:last-child,
 .records td:last-child {
-    padding: 0;
-    /* min-width: 160px; */
-    display: flex;
-    justify-content: space-evenly;
+  /* line-height: 70px; */
+  /* min-width: 160px; */
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.records tr:hover {
+  background-color: var(--secundary-color);
 }
