@@ -33,12 +33,13 @@ header h1 {
   border-radius: 10px;
   transition: box-shadow 1s ease;
   min-width: 20%;
-  /* color: var(--azul); */
+  transition: color .7s ease;
 }
 
 header h1:hover {
   /* color: var(--laranja); */
   box-shadow: inset -100svw 0 0 var(--azul);
+  color: white;
 }
 
 main {
@@ -67,16 +68,18 @@ main {
   top: 0;
 }
 table {
-  border-collapse: collapse;
+  /* border-top: 3px; */
+  /* border-collapse: collapse; */
   width: 100%;
 }
+th {
+  background: #abdd93;
+}
+
 th,
 td {
   padding: 8px 15px;
   border: 1px solid #529432;
-}
-th {
-  background: #abdd93;
 }
 
 td {
@@ -88,13 +91,9 @@ thead {
   background-color: var(--azul);
   /* color: white; */
 }
+
 tr:nth-child(even) {
   background-color: var(--verde);
-}
-
-#acoes {
-  display: flex;
-  justify-content: space-around;
 }
 
 footer {

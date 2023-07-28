@@ -12,23 +12,26 @@
 }
 
 .btn {
-    padding: .4rem;
-    font-weight: bold;
-    border: none;
-    color: white;
+  padding: 0.4rem;
+  font-weight: bold;
+  border: none;
+  color: white;
+  transition: box-shadow 1.4s ease;
+}
 
+.btn:hover {
+  box-shadow: inset 120px 0 0 #0000005c;
 }
 
 .btnCadastar {
-    background-color: var(--azul);
-    
+  background-color: var(--azul);
 }
 
 .btnEditar {
-    background-color: var(--laranja);
-    color: #000;
+  background-color: var(--laranja);
+  color: #000;
 }
 
 .btnExcluir {
-    background-color: var(--violeta);
+  background-color: var(--violeta);
 }
