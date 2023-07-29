@@ -41,5 +41,6 @@
 
 
 .modal form {
-    dis
+    display: flex;
+    flex-direction: column;
 }
