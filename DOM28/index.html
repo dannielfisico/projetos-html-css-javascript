@@ -11,18 +11,19 @@
     <title>Layout para CRUD - Cadastro de Clientes</title>
   </head>
   <body>
-    <div class="modal">
+    <div class="modal ocultar">
       <div class="form">
         <div class="modal-header">
           <div class="titulo">
             <h3>CADASTRAR CLIENTE</h3>
+            <span>X</span>
           </div>
         </div>
         <form>
-          <input type="text" placeholder="Nome do Cliente" required>
-          <input type="text" placeholder="Telefone" required>
-          <input type="text" placeholder="E-mail" required>
-          <input type="text" placeholder="Cidade" required>
+          <input type="text" placeholder="Nome do Cliente" autocomplete="off" required>
+          <input type="text" placeholder="Telefone" autocomplete="off" required>
+          <input type="text" placeholder="E-mail" autocomplete="off" required>
+          <input type="text" placeholder="Cidade" autocomplete="off" required>
           <input class="btn btnCadastar" type="button" value="Cadastar">
         </form>
       </div>
