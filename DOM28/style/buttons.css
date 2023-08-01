@@ -27,11 +27,12 @@
 
 .btnCadastar {
   background-color: var(--azul);
+  width: 150px;
 }
 
 .btnEditar {
   background-color: var(--laranja);
-  color: #000;
+  
 }
 
 .btnExcluir {
