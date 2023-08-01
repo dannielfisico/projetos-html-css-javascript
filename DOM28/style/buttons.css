@@ -29,6 +29,10 @@
   background-color: var(--azul);
   width: 150px;
 }
+.btnCancelar {
+  background-color: var(--laranja);
+  width: 150px;
+}
 
 .btnEditar {
   background-color: var(--laranja);

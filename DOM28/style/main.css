@@ -18,7 +18,7 @@ body {
 }
 
 .ocultar {
-  display: none;
+  /* display: none; */
 }
 
 .modal-header {
@@ -47,6 +47,13 @@ body {
 .titulo span:hover {
   background-color: red;
   color: #eee;
+}
+
+.modal-footer {
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 10px;
 }
 
 header {
@@ -86,14 +93,14 @@ header h1:hover {
 }
 
 .form {
-  max-width: 65%;
+  max-width: 45%;
   margin: 15vh auto;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  padding: 30px;
+  padding: 20px 30px 15px 30px;
   background-color: #000000;
 }
 
