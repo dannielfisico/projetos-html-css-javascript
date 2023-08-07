@@ -69,6 +69,9 @@ main {
   font-weight: bold;
 }
 
+.hidden {
+  display: none;
+}
 footer {
   background-color: rgb(180, 180, 180);
   color: #eee;
