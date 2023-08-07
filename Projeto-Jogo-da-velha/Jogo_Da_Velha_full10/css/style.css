@@ -47,6 +47,28 @@ main {
   user-select: none;
 }
 
+.game-over {
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.692);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+}
+
+.game-over a {
+  text-decoration: none;
+  color: red;
+  padding: 5px;
+  background-color: yellow;
+  margin: 10px;
+  font-weight: bold;
+}
+
 footer {
   background-color: rgb(180, 180, 180);
   color: #eee;
