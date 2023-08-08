@@ -1,9 +1,4 @@
-const pessoa = {
-  nome: "Rafael",
-  sobrenome: "Vasconcelos",
-  idade: 32,
-  profissao: "Estudante",
-};
+
 // CRUD LOCAL STORAGE
 // CREATE - Criar Novo Registro
 const setLocalStorage = (dbClientes) =>
@@ -39,17 +34,3 @@ const deleteClient = (index) => {
 // deleteClient(1);
 
 
-//INTERAÇÃO COM A INTERFACE DO USUÁRIO
-
-const btnCadastrar = document.querySelector('.btnCadastrar')
-const btnFechar = document.querySelector('.btnFechar')
-
-const abrirModal = () => {
-    const modal = document.querySelector('.modal')
-    modal.classList.toggle('oculto')
-}
-
-
-//eventos
-btnCadastrar.addEventListener('click', abrirModal)
-btnFechar.addEventListener('click', abrirModal)
