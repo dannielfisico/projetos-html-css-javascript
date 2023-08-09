@@ -1,5 +1,5 @@
 class Pessoa {
-  constructor(nome, endereco, idade) {
+  constructor(nome, endereco = "não informado", idade) {
     this.nome = nome;
     this.endereco = endereco;
     this.idade = idade;
@@ -17,7 +17,12 @@ class Pessoa {
 }
 
 const p1 = new Pessoa("Daniel Alves", "Guaraciaba do Norte", 37);
+const p2 = new Pessoa("Edson", "", 39);
 
 p1.falarNome();
 p1.falarEndereco();
 p1.falarIdade();
+
+p2.falarNome();
+p2.falarEndereco();
+p2.falarIdade();
