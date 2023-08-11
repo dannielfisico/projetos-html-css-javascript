@@ -42,10 +42,18 @@ main {
 
 form {
   background-color: beige;
-  margin: 15px;
-  padding: 20px;
 }
 
+.form-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-header:nth-child() {
+  width: 100%;
+  background-color: red;
+  text-align: center;
+}
 form div label {
   font-weight: bold;
 }
@@ -56,12 +64,18 @@ form input {
 }
 
 .fields {
-    display: grid;
-    grid-template-columns: ;
+  display: grid;
+  grid-template-columns: ;
 }
 
 #buttonsArea {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
+}
+
+.fields,
+#buttonsArea {
+  margin: 15px;
+  padding: 20px;
 }
