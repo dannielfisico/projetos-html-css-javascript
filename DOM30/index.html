@@ -12,11 +12,27 @@
     </header>
     <main>
         <div class="container">
-            <p>a</p>
+            <form>
+                <div class="fields">
+                    <div><label for="nome">Nome:</label></div>
+                    <input id="nome" type="text" placeholder="Digite o nome do cliente" required>
+                    <div><label for="cidade">Cidade:</label></div>
+                    <input id="cidade" type="text" placeholder="Digite a cidade do cliente" required>
+                    <div><label for="profissao">Profissão:</label></div>
+                    <input id="profissao" type="text" placeholder="Digite a profissão do cliente" required>
+                    <div><label for="anoNascimento">Ano de Nascimento:</label></div>
+                    <input id="anoNascimento" type="text" placeholder="Ano de nasc. do cliente" required>
+                </div>
+                <div id="buttonsArea">
+                    <input type="button" value="Salvar">
+                    <input type="reset" value="Limpar">
+                </div>
+            </form>
         </div>
     </main>
     <footer>
         <H4>2023 | @dannielfisico</H4>
     </footer>
+    <script src="./script.crud.js"></script>
 </body>
 </html>

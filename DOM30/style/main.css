@@ -9,7 +9,7 @@
   --cor2: #5bb1f0;
   --cor3: #f0f043;
   --cor4: #f02f2b;
-  --cor5: #a32826;
+  --cor5: #a3282681;
 }
 
 body {
@@ -19,7 +19,8 @@ body {
   background-color: var(--cor2);
 }
 
-header, footer {
+header,
+footer {
   text-align: center;
   background-color: var(--cor3);
   padding: 4px 0;
@@ -33,10 +34,34 @@ main {
 }
 
 .container {
-    background-color: var(--cor5);
-    min-width: 90%;
-    height: 90%;
-    margin: auto;
+  background-color: var(--cor5);
+  min-width: 90%;
+  height: 90%;
+  margin: auto;
 }
 
+form {
+  background-color: beige;
+  margin: 15px;
+  padding: 20px;
+}
 
+form div label {
+  font-weight: bold;
+}
+
+form input {
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.fields {
+    display: grid;
+    grid-template-columns: ;
+}
+
+#buttonsArea {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
