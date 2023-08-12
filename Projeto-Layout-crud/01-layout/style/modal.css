@@ -27,7 +27,6 @@
   line-height: 40px;
   display: flex;
   justify-content: space-between;
-  user-select: none;
 }
 
 .modal-header h2 {

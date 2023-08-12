@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="./style/recods.css" />
     <link rel="stylesheet" href="./style/modal.css" />
     <script defer src="./script/crud.js"></script>
-    <script defer src="./script/interacao.js"></script>
     <title>CRUD</title>
   </head>
   <body>
@@ -17,9 +16,7 @@
       <h1 class="header-title">Cadastro de Clientes</h1>
     </header>
     <main>
-      <button id="btnCadastrar" class="btn btnCadastrar" type="button">
-        Cadastrar Cliente
-      </button>
+      <button class="btn btnCadastrar" type="button">Cadastrar Cliente</button>
       <table class="records">
         <thead>
           <tr>
@@ -37,12 +34,8 @@
             <td>(88)9 8818-3286</td>
             <td>Guaraciaba do Norte</td>
             <td>
-              <button id="btnEditar" class="btn btnEditar" type="button">
-                Editar
-              </button>
-              <button id="btnExcluir" class="btn btnExcluir" type="button">
-                Excluir
-              </button>
+              <button class="btn btnEditar" type="button">Editar</button>
+              <button class="btn btnExcluir" type="button">Excluir</button>
             </td>
           </tr>
 
@@ -77,7 +70,6 @@
           </header>
           <form class="modal-form">
             <input
-              id="nome"
               type="text"
               class="modal-field"
               placeholder="Nome do cliente"
@@ -85,21 +77,18 @@
               required
             />
             <input
-              id="email"
               type="email"
               class="modal-field"
               placeholder="E-mail do cliente"
               required
             />
             <input
-              id="tel"
               type="tel"
               class="modal-field"
               placeholder="Celular do cliente"
               required
             />
             <input
-              id="cidade"
               type="text"
               class="modal-field"
               placeholder="Cidade do cliente"
@@ -107,16 +96,12 @@
             />
           </form>
           <footer class="modal-footer">
-            <button id="btnSalvar" class="btn btnSalvar" type="button">
-              Savar
-            </button>
-            <button id="btnCancelar" class="btn btnCancelar" type="button">
-              Cancelar
-            </button>
+            <button class="btn btnSalvar" type="button">Savar</button>
+            <button class="btn btnCancelar" type="button">Cancelar</button>
           </footer>
         </div>
       </div>
     </main>
-    <footer><h4>Cadastro de clientes</h4></footer>
+    <footer>footer</footer>
   </body>
 </html>

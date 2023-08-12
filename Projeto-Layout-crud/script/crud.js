@@ -1,15 +1,31 @@
 
-const btnCadastrar = document.getElementsByClassName('btnCadastrar')[0]
-const btnCancelar = document.getElementsByClassName('btnCancelar')[0]
-const modalClose = document.getElementsByClassName('modal-close')[0]
-const modal = document.getElementById('modal')
+// Objeto cliente
 
-const exibirOcultarModal = () => {
-    modal.classList.toggle('oculto')
-}
+// const cliente = new Object();
 
-//Eventos
+//CRUD
+const getLocalStorage = () =>
+  JSON.parse(localStorage.getItem("listaClientes")) ?? [];
+const setLocalStorage = (banco) =>
+  localStorage.setItem("listaClientes", JSON.stringify(banco));
 
-btnCadastrar.addEventListener('click', exibirOcultarModal)
-btnCancelar.addEventListener('click', exibirOcultarModal)
-modalClose.addEventListener('click', exibirOcultarModal)
+const cadastrarCliente = (cliente) => {
+  pegarDadosForm(cliente);
+
+  const banco = getLocalStorage();
+  banco.push(cliente);
+  setLocalStorage(banco);
+};
+
+const deleteCliente = (index) => {
+  const banco = getLocalStorage();
+  banco.splice(index, 1);
+  setLocalStorage(banco);
+};
+
+const atualizarCliente = (index, cliente) => {
+  const banco = getLocalStorage();
+  pegarDadosForm(cliente);
+  banco[index] = cliente;
+  setLocalStorage(banco);
+};
